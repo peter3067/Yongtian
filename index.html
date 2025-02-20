@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>鹿仔港寮 永天宮</title>
+    <style>
+        .searchable {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>鹿仔港寮 永天宮 點燈查詢</h1>
+    <input type="text" id="searchInput" placeholder="輸入姓名 或 公司行號">
+    <button onclick="search()">查詢</button>
+    <div id="content">
+        <!-- 光明燈 -->
+        <p class="searchable">溫祥泰-光明燈：第一排 053</p>        <p class="searchable">林淑茹-光明燈：第一排 055</p>        <p class="searchable">葉何一-光明燈：第一排 056</p>        <p class="searchable">李英龍-光明燈：第一排 057</p>
+        <p class="searchable">潘玫綺-光明燈：第一排 058</p>        <p class="searchable">李家誠-光明燈：第一排 059</p>        <p class="searchable">張竹盛-光明燈：第一排 060</p>        <p class="searchable">張元泰-光明燈：第一排 061</p>
+        <p class="searchable">張永澄-光明燈：第一排 062</p>        <p class="searchable">林兆祐-光明燈：第一排 063</p>        <p class="searchable">徐雪娥-光明燈：第一排 065</p>        <p class="searchable">林佳楷-光明燈：第一排 066</p>
+        <p class="searchable">胡珮琪-光明燈：第一排 067</p>        <p class="searchable">胡毓庭-光明燈：第一排 068</p>        <p class="searchable">蔡富博-光明燈：第一排 069</p>        <p class="searchable">葉君馨-光明燈：第一排 070</p>
+        <p class="searchable">蔡柏漢-光明燈：第一排 071</p>        <p class="searchable">陳美麗-光明燈：第一排 072</p>        <p class="searchable">楊智傑-光明燈：第一排 073</p>        <p class="searchable">楊佾汵-光明燈：第一排 075</p>
+        <p class="searchable">楊智偉-光明燈：第一排 076</p>        <p class="searchable">楊羽筑-光明燈：第一排 077</p>        <p class="searchable">吳松濂-光明燈：第一排 078</p>        <p class="searchable">黃詩育-光明燈：第一排 079</p>
+        <p class="searchable">朱念昌-光明燈：第一排 080</p>        <p class="searchable">張莉敏-光明燈：第一排 081</p>        <p class="searchable">朱立帆-光明燈：第一排 082</p>        <p class="searchable">朱弘旭-光明燈：第一排 083</p>
+        <p class="searchable">鄭淑女-光明燈：第一排 085</p>        <p class="searchable">陳群鑫-光明燈：第一排 086</p>        <p class="searchable">陳景滿-光明燈：第一排 087</p>        <p class="searchable">陳群禧-光明燈：第一排 088</p>
+        <p class="searchable">曾紹舲-光明燈：第一排 089</p>        <p class="searchable">曾伯倫-光明燈：第一排 090</p>        <p class="searchable">曾芷柔-光明燈：第一排 091</p>        <p class="searchable">羅雅馨-光明燈：第一排 092</p>
+        <p class="searchable">邱欣怡-光明燈：第一排 093</p>        <p class="searchable">紀皇秋-光明燈：第一排 095</p>        <p class="searchable">王仁杰-光明燈：第一排 096</p>        <p class="searchable">顏沛淇-光明燈：第一排 097</p>
+        <p class="searchable">王宥甯-光明燈：第一排 098</p>        <p class="searchable">蔡惠霖-光明燈：第一排 099</p>        <p class="searchable">章宗佑-光明燈：第一排 103</p>        <p class="searchable">章宗任-光明燈：第一排 102</p>
+        <p class="searchable">章元豪-光明燈：第一排 101</p>        <p class="searchable">李和縈-光明燈：第一排 100</p>        <p class="searchable">章景勛-光明燈：第一排 105</p>        <p class="searchable">吳雅惠-光明燈：第一排 106</p>
+        <p class="searchable">章宗立-光明燈：第一排 107</p>        <p class="searchable">謝詠婕-光明燈：第一排 108</p>        <p class="searchable">吳銘章-光明燈：第一排 109</p>        <p class="searchable">吳峰旭-光明燈：第一排 110</p>
+        <p class="searchable">吳權展-光明燈：第一排 111</p>        <p class="searchable">吳思瑤-光明燈：第一排 112</p>        <p class="searchable">紀水雲-光明燈：第一排 113</p>        <p class="searchable">吳國盛-光明燈：第一排 115</p>
+        <p class="searchable">吳剛毅-光明燈：第一排 116</p>        <p class="searchable">吳之詠-光明燈：第一排 117</p>        <p class="searchable">何雯婷-光明燈：第一排 118</p>        <p class="searchable">劉丞瑋-光明燈：第一排 119</p>
+        <p class="searchable">陳春輝-光明燈：第一排 120</p>        <p class="searchable">陳慶隆-光明燈：第一排 121</p>        <p class="searchable">鄭美英-光明燈：第一排 122</p>        <p class="searchable">陳進賢-光明燈：第一排 123</p>
+        <p class="searchable">翁瑛徽-光明燈：第一排 125</p>        <p class="searchable">陳綵湘-光明燈：第一排 126</p>        <p class="searchable">陳秉禾-光明燈：第一排 127</p>        <p class="searchable">陳鵬仁-光明燈：第一排 128</p>
+        <p class="searchable">柯佩宜-光明燈：第一排 129</p>        <p class="searchable">陳泳潔-光明燈：第一排 130</p>        <p class="searchable">陳研帆-光明燈：第一排 131</p>        <p class="searchable">李銘桑-光明燈：第一排 132</p>
+        <p class="searchable">呂慧君-光明燈：第一排 133</p>        <p class="searchable">李侑芯-光明燈：第一排 135</p>        <p class="searchable">李欣穎-光明燈：第一排 136</p>        <p class="searchable">蘇湘雲-光明燈：第一排 137</p>
+        <p class="searchable">張昌億-光明燈：第一排 138</p>        <p class="searchable">張光緯-光明燈：第一排 139</p>        <p class="searchable">何銘修-光明燈：第一排 150</p>        <p class="searchable">葉海芳-光明燈：第一排 151</p>
+        <p class="searchable">何芳鋆-光明燈：第一排 152</p>        <p class="searchable">何芳靚-光明燈：第一排 153</p>        <p class="searchable">蘇文功-光明燈：第一排 155</p>        <p class="searchable">張滄基-光明燈：第一排 156</p>
+        <p class="searchable">紀時春-光明燈：第一排 157</p>        <p class="searchable">紀張淑麗-光明燈：第一排 158</p>      <p class="searchable">劉至祥-光明燈：第一排 159</p>        <p class="searchable">康依婷-光明燈：第一排 160</p>
+        <p class="searchable">劉谷美-光明燈：第一排 161</p>        <p class="searchable">黃柏剛-光明燈：第一排 162</p>        <p class="searchable">陳雅玲-光明燈：第一排 163</p>        <p class="searchable">黃沛淳-光明燈：第一排 165</p>
+        <p class="searchable">黃庭菲-光明燈：第一排 166</p>        <p class="searchable">黃紫妘-光明燈：第一排 167</p>        <p class="searchable">顏志坤-光明燈：第一排 168</p>        <p class="searchable">張語晞-光明燈：第一排 169</p>
+        <p class="searchable">蔡尚宏-光明燈：第一排 170</p>        <p class="searchable">蔡子宥-光明燈：第一排 171</p>        <p class="searchable">陳冠霏-光明燈：第一排 172</p>        <p class="searchable">唐佳君-光明燈：第一排 173</p>
+        <p class="searchable">王騰慶-光明燈：第一排 175</p>        <p class="searchable">王相閎-光明燈：第一排 176</p>        <p class="searchable">李嘉哲-光明燈：第一排 177</p>        <p class="searchable">賴炫宇-光明燈：第一排 178</p>
+        <p class="searchable">賴竑睿-光明燈：第一排 179</p>        <p class="searchable">沈承翰-光明燈：第一排 180</p>        <p class="searchable">陳郁蓉-光明燈：第一排 181</p>        <p class="searchable">曾貴群-光明燈：第一排 182</p>
+        <p class="searchable">吳美容-光明燈：第一排 183</p>        <p class="searchable">曾倍宏-光明燈：第一排 185</p>        <p class="searchable">曾婉婷-光明燈：第一排 186</p>        <p class="searchable">吳祥維-光明燈：第二排 001</p>
+        <p class="searchable">邱偉豪-光明燈：第二排 002</p>        <p class="searchable">楊純玫-光明燈：第二排 003</p>        <p class="searchable">邱善婕-光明燈：第二排 005</p>        <p class="searchable">邱禹棠-光明燈：第二排 006</p>
+        <p class="searchable">柯凰麗-光明燈：第二排 007</p>        <p class="searchable">陳宥辰-光明燈：第二排 008</p>        <p class="searchable">陳芸禎-光明燈：第二排 009</p>        <p class="searchable">許信紀-光明燈：第二排 010</p>
+        <p class="searchable">許瑄芸-光明燈：第二排 011</p>        <p class="searchable">許軒誠-光明燈：第二排 012</p>        <p class="searchable">陳迎蓁-光明燈：第二排 013</p>        <p class="searchable">王士凱-光明燈：第二排 015</p>
+        <p class="searchable">陳曉慈-光明燈：第二排 016</p>        <p class="searchable">王浩宇-光明燈：第二排 017</p>        <p class="searchable">王瀚宇-光明燈：第二排 018</p>        <p class="searchable">王良暉-光明燈：第二排 019</p>
+        <p class="searchable">陳懿欣-光明燈：第二排 020</p>        <p class="searchable">蔣典曉-光明燈：第二排 021</p>        <p class="searchable">徐郁婷-光明燈：第二排 022</p>        <p class="searchable">王珍藜-光明燈：第二排 023</p>
+        <p class="searchable">蔣品妍-光明燈：第二排 025</p>        <p class="searchable">蔣予恩-光明燈：第二排 026</p>        <p class="searchable">陳思怡-光明燈：第二排 027</p>        <p class="searchable">徐郁文-光明燈：第二排 028</p>
+        <p class="searchable">徐小雲-光明燈：第二排 029</p>        <p class="searchable">劉濬家-光明燈：第二排 030</p>        <p class="searchable">林宜蓁-光明燈：第二排 031</p>        <p class="searchable">劉橙洋-光明燈：第二排 032</p>
+        <p class="searchable">劉若妍-光明燈：第二排 033</p>        <p class="searchable">陳靜瑜-光明燈：第二排 035</p>        <p class="searchable">吳國華-光明燈：第二排 036</p>        <p class="searchable">吳佳潓-光明燈：第二排 037</p>
+        <p class="searchable">吳承祐-光明燈：第二排 038</p>        <p class="searchable">郭敏森-光明燈：第二排 039</p>        <p class="searchable">郭東燊-光明燈：第二排 050</p>        <p class="searchable">洪秉賢-光明燈：第二排 051</p>
+        <p class="searchable">賴秀茹-光明燈：第二排 052</p>        <p class="searchable">洪楷喬-光明燈：第二排 053</p>        <p class="searchable">陳錦田-光明燈：第二排 055</p>        <p class="searchable">陳重安-光明燈：第二排 056</p>
+        <p class="searchable">陶琮錡-光明燈：第二排 057</p>        <p class="searchable">李苓鈺-光明燈：第二排 058</p>        <p class="searchable">張倚鐔-光明燈：第二排 059</p>        <p class="searchable">林郁汶-光明燈：第二排 060</p>
+        <p class="searchable">張庭瑜-光明燈：第二排 061</p>        <p class="searchable">林昌昇-光明燈：第二排 062</p>        <p class="searchable">莊淮閔-光明燈：第二排 063</p>        <p class="searchable">黃意婷-光明燈：第二排 065</p>
+        <p class="searchable">莊秉鋐-光明燈：第二排 066</p>        <p class="searchable">莊明燊-光明燈：第二排 067</p>        <p class="searchable">林宏哲-光明燈：第二排 068</p>        <p class="searchable">游舒涵-光明燈：第二排 069</p>
+        <p class="searchable">吳璁憲-光明燈：第二排 070</p>        <p class="searchable">吳曉玟-光明燈：第二排 071</p>        <p class="searchable">吳浚維-光明燈：第二排 072</p>        <p class="searchable">黃坤榜-光明燈：第二排 073</p>
+        <p class="searchable">余瑞欽-光明燈：第二排 075</p>        <p class="searchable">東連足-光明燈：第二排 076</p>        <p class="searchable">林明楷-光明燈：第二排 077</p>        <p class="searchable">曾盟君-光明燈：第二排 078</p>
+        <p class="searchable">吳進火-光明燈：第二排 079</p>        <p class="searchable">陳緞  -光明燈：第二排 080</p>        <p class="searchable">吳國  -光明燈：第二排 081</p>        <p class="searchable">葉雅琪-光明燈：第二排 082</p>
+        <p class="searchable">吳國綸-光明燈：第二排 083</p>        <p class="searchable">吳宜珊-光明燈：第二排 085</p>        <p class="searchable">黃沛宸-光明燈：第二排 086</p>        <p class="searchable">祁齡玲-光明燈：第二排 087</p>
+        <p class="searchable">陳柏恩-光明燈：第二排 088</p>        <p class="searchable">蔡政峰-光明燈：第二排 089</p>        <p class="searchable">洪惠如-光明燈：第二排 090</p>        <p class="searchable">邱顯癸-光明燈：第二排 091</p>
+        <p class="searchable">陳秀娥-光明燈：第二排 092</p>        <p class="searchable">邱炫宗-光明燈：第二排 093</p>        <p class="searchable">邱郁誠-光明燈：第二排 095</p>        <p class="searchable">何芷儀-光明燈：第二排 096</p>
+        <p class="searchable">邱柄叡-光明燈：第二排 097</p>        <p class="searchable">陳宇信-光明燈：第二排 098</p>        <p class="searchable">林秀月-光明燈：第二排 099</p>        <p class="searchable">吳孟玉-光明燈：第二排 100</p>
+        <p class="searchable">吳得逢-光明燈：第二排 101</p>        <p class="searchable">吳建欣-光明燈：第二排 102</p>        <p class="searchable">蔡秀如-光明燈：第二排 103</p>        <p class="searchable">王怡婷-光明燈：第二排 105</p>
+        <p class="searchable">吳定原-光明燈：第二排 106</p>        <p class="searchable">吳瑩萱-光明燈：第二排 107</p>        <p class="searchable">吳喬諭-光明燈：第二排 108</p>        <p class="searchable">夏啟倫-光明燈：第二排 109</p>
+        <p class="searchable">夏駿林-光明燈：第二排 110</p>        <p class="searchable">陳怡伶-光明燈：第二排 111</p>        <p class="searchable">夏余秀英-光明燈：第二排 112</p>      <p class="searchable">夏冠瑋-光明燈：第二排 113</p>
+        <p class="searchable">夏建德-光明燈：第二排 115</p>        <p class="searchable">黃朝濬-光明燈：第二排 116</p>        <p class="searchable">楊淵中-光明燈：第二排 117</p>        <p class="searchable">吳棋實-光明燈：第二排 118</p>
+        <p class="searchable">吳翊慈-光明燈：第二排 119</p>        <p class="searchable">林尚泓-光明燈：第二排 120</p>        <p class="searchable">林姍諭-光明燈：第二排 121</p>        <p class="searchable">林何罔-光明燈：第二排 122</p>
+        <p class="searchable">林永宏-光明燈：第二排 123</p>        <p class="searchable">吳碧珍-光明燈：第二排 125</p>        <p class="searchable">林秀言-光明燈：第二排 126</p>        <p class="searchable">林秀鍇-光明燈：第二排 127</p>
+        <p class="searchable">吳燕林-光明燈：第二排 128</p>        <p class="searchable">何淑玲-光明燈：第二排 129</p>        <p class="searchable">吳博原-光明燈：第二排 130</p>        <p class="searchable">吳思節-光明燈：第二排 131</p>
+        <p class="searchable">林詩耿-光明燈：第二排 132</p>        <p class="searchable">游雅婷-光明燈：第二排 133</p>        <p class="searchable">陳居冬-光明燈：第二排 135</p>        <p class="searchable">陳益廷-光明燈：第二排 136</p>
+        <p class="searchable">何幸英-光明燈：第二排 137</p>        <p class="searchable">徐君明-光明燈：第二排 138</p>        <p class="searchable">曾方盈-光明燈：第二排 139</p>        <p class="searchable">謝嘉銘-光明燈：第二排 150</p>
+        <p class="searchable">張琼美-光明燈：第二排 151</p>        <p class="searchable">謝芯楀-光明燈：第二排 152</p>        <p class="searchable">謝芯妮-光明燈：第二排 153</p>        <p class="searchable">何名凱-光明燈：第二排 155</p>
+        <p class="searchable">張鑫致-光明燈：第二排 156</p>        <p class="searchable">陳莉珍-光明燈：第二排 157</p>        <p class="searchable">白世照-光明燈：第二排 158</p>        <p class="searchable">曾詩雅-光明燈：第二排 159</p>
+        <p class="searchable">白宗育-光明燈：第二排 160</p>        <p class="searchable">白旻靄-光明燈：第二排 161</p>        <p class="searchable">劉炫成-光明燈：第二排 162</p>        <p class="searchable">賴宜均-光明燈：第二排 163</p>
+        <p class="searchable">王騰毅-光明燈：第二排 165</p>        <p class="searchable">王姿婷-光明燈：第二排 166</p>        <p class="searchable">林怡貞-光明燈：第二排 167</p>        <p class="searchable">李新瑾-光明燈：第二排 168</p>
+        <p class="searchable">葉燕樺-光明燈：第二排 169</p>        <p class="searchable">吳淑貞-光明燈：第二排 170</p>        <p class="searchable">林炳煌-光明燈：第二排 171</p>        <p class="searchable">林蓓釤-光明燈：第二排 172</p>
+        <p class="searchable">林品睿-光明燈：第二排 173</p>        <p class="searchable">林基民-光明燈：第二排 175</p>        <p class="searchable">張必佳-光明燈：第二排 176</p>        <p class="searchable">林恩齊-光明燈：第二排 177</p>
+        <p class="searchable">林奕亘-光明燈：第二排 178</p>        <p class="searchable">蔡其輝-光明燈：第二排 179</p>        <p class="searchable">蔡顯壕-光明燈：第二排 180</p>        <p class="searchable">施淑珍-光明燈：第二排 181</p>
+        <p class="searchable">蔡宇帆-光明燈：第二排 182</p>        <p class="searchable">關志隆-光明燈：第二排 183</p>        <p class="searchable">林美玲-光明燈：第二排 185</p>        <p class="searchable">陳霈柔-光明燈：第二排 186</p>
+        <p class="searchable">陳文隆-光明燈：第二排 187</p>        <p class="searchable">劉素華-光明燈：第三排 001</p>        <p class="searchable">陳立譯-光明燈：第三排 002</p>        <p class="searchable">吳胤  -光明燈：第三排 003</p>
+        <p class="searchable">蔣右貞-光明燈：第三排 005</p>        <p class="searchable">吳乙叡-光明燈：第三排 006</p>        <p class="searchable">吳乙霖-光明燈：第三排 007</p>        <p class="searchable">簡仕鳴-光明燈：第三排 008</p>
+        <p class="searchable">簡品妍-光明燈：第三排 009</p>        <p class="searchable">簡品丞-光明燈：第三排 010</p>        <p class="searchable">張庭瑄-光明燈：第三排 011</p>        <p class="searchable">陳雅琦-光明燈：第三排 012</p>
+        <p class="searchable">童丁卯-光明燈：第三排 013</p>        <p class="searchable">陳素密-光明燈：第三排 015</p>        <p class="searchable">童建彰-光明燈：第三排 016</p>        <p class="searchable">童美雯-光明燈：第三排 017</p>
+        <p class="searchable">童少龍-光明燈：第三排 018</p>        <p class="searchable">童玫菁-光明燈：第三排 019</p>        <p class="searchable">黃思瑀-光明燈：第三排 020</p>        <p class="searchable">童泊森-光明燈：第三排 021</p>
+        <p class="searchable">童奕森-光明燈：第三排 022</p>        <p class="searchable">曲晨涵-光明燈：第三排 023</p>        <p class="searchable">黃俊豪-光明燈：第三排 025</p>        <p class="searchable">童香綾-光明燈：第三排 026</p>
+        <p class="searchable">黃宥寧-光明燈：第三排 027</p>        <p class="searchable">黃子容-光明燈：第三排 028</p>        <p class="searchable">吳洋銘-光明燈：第三排 029</p>        <p class="searchable">吳暉庫-光明燈：第三排 030</p>
+        <p class="searchable">吳亞諭-光明燈：第三排 031</p>        <p class="searchable">吳律葳-光明燈：第三排 032</p>        <p class="searchable">謝雨容-光明燈：第三排 033</p>        <p class="searchable">吳采宸-光明燈：第三排 035</p>
+        <p class="searchable">吳清福-光明燈：第三排 036</p>        <p class="searchable">梁綠  -光明燈：第三排 037</p>        <p class="searchable">吳麗君-光明燈：第三排 038</p>        <p class="searchable">劉芷含-光明燈：第三排 039</p>
+        <p class="searchable">劉芷吟-光明燈：第三排 050</p>        <p class="searchable">王玉瑋-光明燈：第三排 051</p>        <p class="searchable">吳國棟-光明燈：第三排 052</p>        <p class="searchable">吳丁山-光明燈：第三排 053</p>
+        <p class="searchable">吳梓旭-光明燈：第三排 055</p>        <p class="searchable">陳金花-光明燈：第三排 056</p>        <p class="searchable">吳家榮-光明燈：第三排 057</p>        <p class="searchable">楊雅鈞-光明燈：第三排 058</p>
+        <p class="searchable">吳苡晴-光明燈：第三排 059</p>        <p class="searchable">陳志豪-光明燈：第三排 060</p>        <p class="searchable">王昭娟-光明燈：第三排 061</p>        <p class="searchable">陳宥瑞-光明燈：第三排 062</p>
+        <p class="searchable">陳宜汝-光明燈：第三排 063</p>        <p class="searchable">王錫輝-光明燈：第三排 065</p>        <p class="searchable">潘同勝-光明燈：第三排 066</p>        <p class="searchable">潘抒涵-光明燈：第三排 067</p>
+        <p class="searchable">潘維揚-光明燈：第三排 068</p>        <p class="searchable">陳桂圓-光明燈：第三排 069</p>        <p class="searchable">潘子鈞-光明燈：第三排 070</p>        <p class="searchable">郭倍華-光明燈：第三排 071</p>
+        <p class="searchable">陳建宏-光明燈：第三排 072</p>        <p class="searchable">蘇顏花-光明燈：第三排 073</p>        <p class="searchable">馮慧珍-光明燈：第三排 075</p>        <p class="searchable">馮慧琪-光明燈：第三排 076</p>
+        <p class="searchable">陳志一-光明燈：第三排 077</p>        <p class="searchable">陳億玲-光明燈：第三排 078</p>        <p class="searchable">陳湘義-光明燈：第三排 079</p>        <p class="searchable">陳寬益-光明燈：第三排 080</p>
+        <p class="searchable">黃盈穎-光明燈：第三排 081</p>        <p class="searchable">陳寬庭-光明燈：第三排 082</p>        <p class="searchable">蔡佳良-光明燈：第三排 083</p>        <p class="searchable">陳玥霓-光明燈：第三排 085</p>
+        <p class="searchable">王翊驊-光明燈：第三排 087</p>        <p class="searchable">廖梓伶-光明燈：第三排 088</p>        <p class="searchable">吳金翰-光明燈：第三排 089</p>        <p class="searchable">陳阿靜-光明燈：第三排 090</p>
+        <p class="searchable">廖宗毅-光明燈：第三排 091</p>        <p class="searchable">吳勁志-光明燈：第三排 092</p>        <p class="searchable">吳冠德-光明燈：第三排 093</p>        <p class="searchable">蔡和芳-光明燈：第三排 095</p>
+        <p class="searchable">吳朝濃-光明燈：第三排 096</p>        <p class="searchable">吳文獻-光明燈：第三排 097</p>        <p class="searchable">甘嘉婷-光明燈：第三排 098</p>        <p class="searchable">吳雅婷-光明燈：第三排 099</p>
+        <p class="searchable">吳婕寧-光明燈：第三排 100</p>        <p class="searchable">吳沂恩-光明燈：第三排 101</p>        <p class="searchable">賴惠容-光明燈：第三排 102</p>        <p class="searchable">萬逸誠-光明燈：第三排 103</p>
+        <p class="searchable">霍竹君-光明燈：第三排 105</p>        <p class="searchable">萬先翊-光明燈：第三排 106</p>        <p class="searchable">霍鎮海-光明燈：第三排 107</p>        <p class="searchable">楊玉新-光明燈：第三排 108</p>
+        <p class="searchable">霍竹真-光明燈：第三排 109</p>        <p class="searchable">洪正雲-光明燈：第三排 110</p>        <p class="searchable">蔡宇鵬-光明燈：第三排 111</p>        <p class="searchable">蔡秉宏-光明燈：第三排 112</p>
+        <p class="searchable">許梓霈-光明燈：第三排 113</p>        <p class="searchable">蔡承翰-光明燈：第三排 115</p>        <p class="searchable">高千雅-光明燈：第三排 116</p>        <p class="searchable">張晨洋-光明燈：第三排 117</p>
+        <p class="searchable">張紘唯-光明燈：第三排 118</p>        <p class="searchable">陳瑞于-光明燈：第三排 119</p>        <p class="searchable">吳飛呈-光明燈：第三排 120</p>        <p class="searchable">吳富平-光明燈：第三排 121</p>
+        <p class="searchable">陳世惠-光明燈：第三排 122</p>        <p class="searchable">吳杰瀚-光明燈：第三排 123</p>        <p class="searchable">吳梓昊-光明燈：第三排 125</p>        <p class="searchable">曾俞姍-光明燈：第三排 126</p>
+        <p class="searchable">陳韋伸-光明燈：第三排 127</p>        <p class="searchable">黃麒晏-光明燈：第三排 128</p>        <p class="searchable">李俊彥-光明燈：第三排 129</p>        <p class="searchable">李奜瑒-光明燈：第三排 130</p>
+        <p class="searchable">陳冠綸-光明燈：第三排 131</p>        <p class="searchable">黃文鴻-光明燈：第三排 132</p>        <p class="searchable">余美蘭-光明燈：第三排 133</p>        <p class="searchable">林雪裡-光明燈：第三排 135</p>
+        <p class="searchable">吳永隆-光明燈：第三排 136</p>        <p class="searchable">翁清杕-光明燈：第三排 137</p>        <p class="searchable">楊雯雯-光明燈：第三排 138</p>        <p class="searchable">翁士袁-光明燈：第三排 139</p>
+        <p class="searchable">鄭莉琪-光明燈：第三排 150</p>        <p class="searchable">翁正育-光明燈：第三排 151</p>        <p class="searchable">王迎安-光明燈：第三排 152</p>        <p class="searchable">陳可欣-光明燈：第三排 153</p>
+        <p class="searchable">韋昌甫-光明燈：第三排 155</p>        <p class="searchable">陳巧欣-光明燈：第三排 156</p>        <p class="searchable">羅輝雄-光明燈：第三排 157</p>        <p class="searchable">羅元德-光明燈：第三排 158</p>
+        <p class="searchable">羅元庸-光明燈：第三排 159</p>        <p class="searchable">羅巧芸-光明燈：第三排 160</p>        <p class="searchable">李麗雪-光明燈：第三排 161</p>        <p class="searchable">吳錦城-光明燈：第三排 162</p>
+        <p class="searchable">黃淑兒-光明燈：第三排 163</p>        <p class="searchable">吳幸樺-光明燈：第三排 165</p>        <p class="searchable">吳承峰-光明燈：第三排 166</p>        <p class="searchable">王家萁-光明燈：第三排 167</p>
+        <p class="searchable">呂育彰-光明燈：第三排 168</p>        <p class="searchable">呂芳儀-光明燈：第三排 169</p>        <p class="searchable">洪思怡-光明燈：第三排 170</p>        <p class="searchable">冬妍濬-光明燈：第三排 171</p>
+        <p class="searchable">賴瓊如-光明燈：第三排 172</p>        <p class="searchable">王建順-光明燈：第三排 173</p>        <p class="searchable">王鵬竣-光明燈：第三排 175</p>        <p class="searchable">王勝弘-光明燈：第三排 176</p>
+        <p class="searchable">洪偉晉-光明燈：第三排 177</p>        <p class="searchable">郭敏勇-光明燈：第三排 178</p>        <p class="searchable">王品臻-光明燈：第三排 179</p>        <p class="searchable">郭雨書-光明燈：第三排 180</p>
+        <p class="searchable">王彥翔-光明燈：第三排 181</p>        <p class="searchable">王彥凱-光明燈：第三排 182</p>        <p class="searchable">王彥琳-光明燈：第三排 183</p>        <p class="searchable">吳心瑜-光明燈：第三排 185</p>
+        <p class="searchable">黃昭翔-光明燈：第三排 186</p>        <p class="searchable">童佑詩-光明燈：第三排 187</p>        <p class="searchable">林榮聰-光明燈：第五排 001</p>        <p class="searchable">劉錦屏-光明燈：第五排 002</p>
+        <p class="searchable">林柏成-光明燈：第五排 003</p>        <p class="searchable">林雅琳-光明燈：第五排 005</p>        <p class="searchable">李芊葦-光明燈：第五排 006</p>        <p class="searchable">林昱妡-光明燈：第五排 007</p>
+        <p class="searchable">林定穎-光明燈：第五排 008</p>        <p class="searchable">林雅琪-光明燈：第五排 009</p>        <p class="searchable">李泓毅-光明燈：第五排 010</p>        <p class="searchable">李沛晴-光明燈：第五排 011</p>
+        <p class="searchable">鄭文豪-光明燈：第五排 012</p>        <p class="searchable">陳佩琪-光明燈：第五排 013</p>        <p class="searchable">鄭心妍-光明燈：第五排 015</p>        <p class="searchable">鄭心語-光明燈：第五排 016</p>
+        <p class="searchable">陳吳綉雲-光明燈：第五排 017</p>      <p class="searchable">陳瑞敏-光明燈：第五排 018</p>        <p class="searchable">陳瑞真-光明燈：第五排 019</p>        <p class="searchable">陳瑞芳-光明燈：第五排 020</p>
+        <p class="searchable">陳郁雯-光明燈：第五排 021</p>        <p class="searchable">陳仲億-光明燈：第五排 022</p>        <p class="searchable">陳嫃妘-光明燈：第五排 023</p>        <p class="searchable">黃久晉-光明燈：第五排 025</p>
+        <p class="searchable">詹欣宜-光明燈：第五排 026</p>        <p class="searchable">曾耀德-光明燈：第五排 027</p>        <p class="searchable">曾蕎畇-光明燈：第五排 028</p>        <p class="searchable">楊清龍-光明燈：第五排 029</p>
+        <p class="searchable">楊沛霖-光明燈：第五排 030</p>        <p class="searchable">陳俊達-光明燈：第五排 031</p>        <p class="searchable">陳政源-光明燈：第五排 032</p>        <p class="searchable">陳閎裕-光明燈：第五排 033</p>
+        <p class="searchable">陳凱郁-光明燈：第五排 035</p>        <p class="searchable">林芳儀-光明燈：第五排 036</p>        <p class="searchable">廖志仁-光明燈：第五排 037</p>        <p class="searchable">鄭筑鎂-光明燈：第五排 038</p>
+        <p class="searchable">周志毅-光明燈：第五排 039</p>        <p class="searchable">陳玟旭-光明燈：第五排 050</p>        <p class="searchable">周泊聖-光明燈：第五排 051</p>        <p class="searchable">吳芊葶-光明燈：第五排 052</p>
+        <p class="searchable">周明郁-光明燈：第五排 053</p>        <p class="searchable">周禹彤-光明燈：第五排 055</p>        <p class="searchable">蔡明志-光明燈：第五排 056</p>        <p class="searchable">黃萱惠-光明燈：第五排 057</p>
+        <p class="searchable">蔡潔欣-光明燈：第五排 058</p>        <p class="searchable">蔡傑豪-光明燈：第五排 059</p>        <p class="searchable">吳于昇-光明燈：第五排 060</p>        <p class="searchable">吳以晴-光明燈：第五排 061</p>
+        <p class="searchable">吳以棋-光明燈：第五排 062</p>        <p class="searchable">王進興-光明燈：第五排 063</p>        <p class="searchable">蕭碧鳳-光明燈：第五排 065</p>        <p class="searchable">王富昇-光明燈：第五排 066</p>
+        <p class="searchable">王賦淋-光明燈：第五排 067</p>        <p class="searchable">張瀞方-光明燈：第五排 068</p>        <p class="searchable">黎秋玉-光明燈：第五排 069</p>        <p class="searchable">鄭秋萍-光明燈：第五排 070</p>
+        <p class="searchable">林佳興-光明燈：第五排 071</p>        <p class="searchable">林耿民-光明燈：第五排 072</p>        <p class="searchable">王湶楓-光明燈：第五排 073</p>        <p class="searchable">王琳筠-光明燈：第五排 075</p>
+        <p class="searchable">陳園松-光明燈：第五排 076</p>        <p class="searchable">張凱盈-光明燈：第五排 077</p>        <p class="searchable">陳家蓉-光明燈：第五排 078</p>        <p class="searchable">陳美馳-光明燈：第五排 079</p>
+        <p class="searchable">陳美杞-光明燈：第五排 080</p>        <p class="searchable">劉人仁-光明燈：第五排 081</p>        <p class="searchable">楊淑如-光明燈：第五排 082</p>        <p class="searchable">蔡宜蓁-光明燈：第五排 083</p>
+        <p class="searchable">蔡宜涵-光明燈：第五排 085</p>        <p class="searchable">林照域-光明燈：第五排 086</p>        <p class="searchable">侯舒媛-光明燈：第五排 087</p>        <p class="searchable">孫啟中-光明燈：第五排 088</p>
+        <p class="searchable">劉秀枝-光明燈：第五排 089</p>        <p class="searchable">孫意筑-光明燈：第五排 090</p>        <p class="searchable">孫珮瑄-光明燈：第五排 091</p>        <p class="searchable">顏清吉-光明燈：第五排 092</p>
+        <p class="searchable">顏玉女-光明燈：第五排 093</p>        <p class="searchable">顏先協-光明燈：第五排 095</p>        <p class="searchable">陳怡秀-光明燈：第五排 096</p>        <p class="searchable">顏志勝-光明燈：第五排 097</p>
+        <p class="searchable">顏淑君-光明燈：第五排 098</p>        <p class="searchable">關安珽-光明燈：第五排 099</p>        <p class="searchable">洪國勇-光明燈：第五排 100</p>        <p class="searchable">洪梓恩-光明燈：第五排 101</p>
+        <p class="searchable">陳素蓮-光明燈：第五排 102</p>        <p class="searchable">洪顯明-光明燈：第五排 103</p>        <p class="searchable">黃湘芸-光明燈：第五排 105</p>        <p class="searchable">洪楷捷-光明燈：第五排 106</p>
+        <p class="searchable">黃棋杰-光明燈：第五排 112</p>        <p class="searchable">張泊文-光明燈：第五排 113</p>        <p class="searchable">王淑薇-光明燈：第五排 115</p>        <p class="searchable">劉至凱-光明燈：第五排 116</p>
+        <p class="searchable">劉群威-光明燈：第五排 117</p>        <p class="searchable">阮慧純-光明燈：第五排 118</p>        <p class="searchable">劉軒睿-光明燈：第五排 119</p>        <p class="searchable">劉恒旭-光明燈：第五排 120</p>
+        <p class="searchable">陳益源-光明燈：第五排 121</p>        <p class="searchable">陳崇堯-光明燈：第五排 122</p>        <p class="searchable">蔡文哲-光明燈：第五排 123</p>        <p class="searchable">王秀文-光明燈：第五排 125</p>
+        <p class="searchable">蔡雨彤-光明燈：第五排 126</p>        <p class="searchable">林友邦-光明燈：第五排 127</p>        <p class="searchable">林銘麒-光明燈：第五排 128</p>        <p class="searchable">林采緹-光明燈：第五排 129</p>
+        <p class="searchable">林宏澤-光明燈：第五排 130</p>        <p class="searchable">高銘葦-光明燈：第五排 131</p>        <p class="searchable">鍾尉坤-光明燈：第五排 132</p>        <p class="searchable">劉財壽-光明燈：第五排 107</p>
+        <p class="searchable">劉浚琪-光明燈：第五排 108</p>        <p class="searchable">劉貞鈺-光明燈：第五排 109</p>        <p class="searchable">劉廖秀英-光明燈：第五排 110</p>      <p class="searchable">楊淑如-光明燈：第五排 111</p>
+        <p class="searchable">黃蔡靜-光明燈：第五排 133</p>        <p class="searchable">鍾若云-光明燈：第五排 135</p>        <p class="searchable">劉宥辰-光明燈：第五排 136</p>        <p class="searchable">吳若凡-光明燈：第五排 137</p>
+        <p class="searchable">吳日恆-光明燈：第五排 138</p>        <p class="searchable">賴姿霏-光明燈：第五排 139</p>        <p class="searchable">洪筱涵-光明燈：第五排 150</p>        <p class="searchable">余鴻慶-光明燈：第五排 151</p>
+        <p class="searchable">王桂花-光明燈：第五排 152</p>        <p class="searchable">余佳璋-光明燈：第五排 153</p>        <p class="searchable">余品璇-光明燈：第五排 155</p>        <p class="searchable">陳麗芳-光明燈：第五排 156</p>
+        <p class="searchable">張家裕-光明燈：第五排 157</p>        <p class="searchable">張子洋-光明燈：第五排 158</p>        <p class="searchable">黃信子-光明燈：第五排 159</p>        <p class="searchable">邱源輝-光明燈：第五排 160</p>
+        <p class="searchable">吳妍紓-光明燈：第五排 161</p>        <p class="searchable">吳金柱-光明燈：第五排 162</p>        <p class="searchable">吳晏榕-光明燈：第五排 163</p>        <p class="searchable">吳欣怡-光明燈：第五排 165</p>
+        <p class="searchable">陳素姿-光明燈：第五排 166</p>        <p class="searchable">王宣雄-光明燈：第五排 167</p>        <p class="searchable">蔡鳳玉-光明燈：第五排 168</p>        <p class="searchable">王億宸-光明燈：第五排 169</p>
+        <p class="searchable">王子弦-光明燈：第五排 170</p>        <p class="searchable">洪子峯-光明燈：第五排 171</p>        <p class="searchable">洪啓恩-光明燈：第五排 172</p>        <p class="searchable">楊淑珍-光明燈：第五排 173</p>
+        <p class="searchable">胡凱翔-光明燈：第五排 175</p>        <p class="searchable">胡博文-光明燈：第五排 176</p>        <p class="searchable">胡凱茵-光明燈：第五排 177</p>        <p class="searchable">黃麗華-光明燈：第五排 178</p>
+        <p class="searchable">林宜蓁-光明燈：第五排 179</p>        <p class="searchable">林宜蒨-光明燈：第五排 180</p>        <p class="searchable">留嘉陽-光明燈：第五排 181</p>        <p class="searchable">吳芝瑩-光明燈：第五排 182</p>
+        <p class="searchable">留語辰-光明燈：第五排 183</p>        <p class="searchable">留塏妮-光明燈：第五排 185</p>        <p class="searchable">唐文忠-光明燈：第五排 186</p>        <p class="searchable">羅紅飛-光明燈：第五排 187</p>
+        <p class="searchable">唐愷鑫-光明燈：第六排 001</p>        <p class="searchable">蕭博升-光明燈：第六排 002</p>        <p class="searchable">蕭百淳-光明燈：第六排 003</p>        <p class="searchable">蕭博仁-光明燈：第六排 005</p>
+        <p class="searchable">陳秋容-光明燈：第六排 006</p>        <p class="searchable">李登豐-光明燈：第六排 007</p>        <p class="searchable">李忠騰-光明燈：第六排 008</p>        <p class="searchable">陳美芬-光明燈：第六排 009</p>
+        <p class="searchable">吳存仁-光明燈：第六排 010</p>        <p class="searchable">張庭昀-光明燈：第六排 011</p>        <p class="searchable">吳宛恩-光明燈：第六排 012</p>        <p class="searchable">吳紹寧-光明燈：第六排 013</p>
+        <p class="searchable">陳昭達-光明燈：第六排 015</p>        <p class="searchable">陳威聞-光明燈：第六排 016</p>        <p class="searchable">簡妃雅-光明燈：第六排 017</p>        <p class="searchable">陳品瑄-光明燈：第六排 018</p>
+        <p class="searchable">陳品妤-光明燈：第六排 019</p>        <p class="searchable">廖顯崇-光明燈：第六排 020</p>        <p class="searchable">林育民-光明燈：第六排 021</p>        <p class="searchable">林育廷-光明燈：第六排 022</p>
+        <p class="searchable">洪雯欣-光明燈：第六排 023</p>        <p class="searchable">林昱辰-光明燈：第六排 025</p>        <p class="searchable">陳蒼緯-光明燈：第六排 026</p>        <p class="searchable">陳弘翊-光明燈：第六排 027</p>
+        <p class="searchable">謝志彬-光明燈：第六排 028</p>        <p class="searchable">謝秉榮-光明燈：第六排 029</p>        <p class="searchable">謝雅嫻-光明燈：第六排 030</p>        <p class="searchable">陳阿幼-光明燈：第六排 031</p>
+        <p class="searchable">曾能聰-光明燈：第六排 032</p>        <p class="searchable">林姵宇-光明燈：第六排 033</p>        <p class="searchable">洪金財-光明燈：第六排 035</p>        <p class="searchable">洪淑娟-光明燈：第六排 036</p>
+        <p class="searchable">洪偉育-光明燈：第六排 037</p>        <p class="searchable">詹德葉-光明燈：第六排 038</p>        <p class="searchable">林琪順-光明燈：第六排 039</p>        <p class="searchable">林筑雯-光明燈：第六排 050</p>
+        <p class="searchable">林玉宗-光明燈：第六排 051</p>        <p class="searchable">林琮溢-光明燈：第六排 052</p>        <p class="searchable">吳哲緯-光明燈：第六排 053</p>        <p class="searchable">吳宜諠-光明燈：第六排 055</p>
+        <p class="searchable">王錦雀-光明燈：第六排 056</p>        <p class="searchable">顏陪勲-光明燈：第六排 057</p>        <p class="searchable">陳大豐-光明燈：第六排 058</p>        <p class="searchable">鄭瑞惠-光明燈：第六排 059</p>
+        <p class="searchable">陳紓綺-光明燈：第六排 060</p>        <p class="searchable">王衍仁-光明燈：第六排 061</p>        <p class="searchable">何佩純-光明燈：第六排 062</p>        <p class="searchable">王羽萱-光明燈：第六排 063</p>
+        <p class="searchable">王正杉-光明燈：第六排 065</p>        <p class="searchable">王童素雲-光明燈：第六排 066</p>      <p class="searchable">周財源-光明燈：第六排 067</p>        <p class="searchable">洪金枝-光明燈：第六排 068</p>
+        <p class="searchable">周訂良-光明燈：第六排 069</p>        <p class="searchable">林雅芳-光明燈：第六排 070</p>        <p class="searchable">周芷彤-光明燈：第六排 071</p>        <p class="searchable">林美珠-光明燈：第六排 072</p>
+        <p class="searchable">陳大發-光明燈：第六排 073</p>        <p class="searchable">陳炎福-光明燈：第六排 075</p>        <p class="searchable">陳昶佑-光明燈：第六排 076</p>        <p class="searchable">陳柏志-光明燈：第六排 077</p>
+        <p class="searchable">陳映靜-光明燈：第六排 078</p>        <p class="searchable">陳書豪-光明燈：第六排 079</p>        <p class="searchable">羅琬齡-光明燈：第六排 080</p>        <p class="searchable">謝采彤-光明燈：第六排 081</p>
+        <p class="searchable">謝承殷-光明燈：第六排 082</p>        <p class="searchable">謝欣霓-光明燈：第六排 083</p>        <p class="searchable">羅宥凱-光明燈：第六排 085</p>        <p class="searchable">黃于萍-光明燈：第六排 086</p>
+        <p class="searchable">黃亭欣-光明燈：第六排 087</p>        <p class="searchable">黃香霖-光明燈：第六排 088</p>        <p class="searchable">吳麗文-光明燈：第六排 089</p>        <p class="searchable">黃碩傑-光明燈：第六排 090</p>
+        <p class="searchable">鄭柔妘-光明燈：第六排 091</p>        <p class="searchable">林仁傑-光明燈：第六排 092</p>        <p class="searchable">陳志宇-光明燈：第六排 093</p>        <p class="searchable">陳尚瑋-光明燈：第六排 095</p>
+        <p class="searchable">洪秀梅-光明燈：第六排 096</p>        <p class="searchable">洪坤桐-光明燈：第六排 097</p>        <p class="searchable">楊文壽-光明燈：第六排 098</p>        <p class="searchable">陳嘉儀-光明燈：第六排 099</p>
+        <p class="searchable">劉瑩翔-光明燈：第六排 100</p>        <p class="searchable">張云蓮-光明燈：第六排 101</p>        <p class="searchable">劉慧珊-光明燈：第六排 102</p>        <p class="searchable">潘志瑜-光明燈：第六排 103</p>
+        <p class="searchable">劉慧琳-光明燈：第六排 105</p>        <p class="searchable">李任欽-光明燈：第六排 106</p>        <p class="searchable">李鳳鵑-光明燈：第六排 107</p>        <p class="searchable">呂文通-光明燈：第六排 108</p>     
+        <p class="searchable">呂佳穎-光明燈：第六排 109</p>        <p class="searchable">呂欣穎-光明燈：第六排 110</p>        <p class="searchable">呂宜霖-光明燈：第六排 111</p>        <p class="searchable">呂依穎-光明燈：第六排 112</p>        
+        <p class="searchable">吳春桃-光明燈：第六排 113</p>        <p class="searchable">吳淑娥-光明燈：第六排 115</p>        <p class="searchable">謝萬華-光明燈：第六排 116</p>        <p class="searchable">謝郁炘-光明燈：第六排 117</p>        
+        <p class="searchable">謝政玹-光明燈：第六排 118</p>        <p class="searchable">謝淳翔-光明燈：第六排 119</p>        <p class="searchable">謝俊賢-光明燈：第六排 120</p>        <p class="searchable">林哲立-光明燈：第六排 121</p>        
+        <p class="searchable">李依容-光明燈：第六排 122</p>        <p class="searchable">吳玉屏-光明燈：第六排 123</p>        <p class="searchable">羅凱暘-光明燈：第六排 125</p>        <p class="searchable">羅睿承-光明燈：第六排 126</p>        
+        <p class="searchable">羅明順-光明燈：第六排 127</p>        <p class="searchable">吳怡蓉-光明燈：第六排 128</p>        <p class="searchable">胡柜澍-光明燈：第六排 129</p>        <p class="searchable">胡瑀真-光明燈：第六排 130</p>        
+        <p class="searchable">胡閔媗-光明燈：第六排 131</p>        <p class="searchable">鄭健緯-光明燈：第六排 132</p>        <p class="searchable">鄭姵均-光明燈：第六排 133</p>        <p class="searchable">王思綾-光明燈：第六排 135</p>        
+        <p class="searchable">童聖惠-光明燈：第六排 136</p>        <p class="searchable">廖盈萱-光明燈：第六排 137</p>        <p class="searchable">廖韋丞-光明燈：第六排 138</p>        <p class="searchable">丁雅君-光明燈：第六排 139</p>        
+        <p class="searchable">丁永慶-光明燈：第六排 150</p>        <p class="searchable">吳素禎-光明燈：第六排 151</p>        <p class="searchable">吳哲豪-光明燈：第六排 152</p>        <p class="searchable">吳哲誠-光明燈：第六排 153</p>        
+        <p class="searchable">吳羽茹-光明燈：第六排 155</p>        <p class="searchable">唐秀玉-光明燈：第六排 156</p>        <p class="searchable">陳茂荃-光明燈：第六排 157</p>        <p class="searchable">陳黃月-光明燈：第六排 158</p>        
+        <p class="searchable">吳秀珍-光明燈：第六排 159</p>        <p class="searchable">蘇金龍-光明燈：第六排 160</p>        <p class="searchable">江麗貞-光明燈：第六排 161</p>        <p class="searchable">謝清廉-光明燈：第六排 162</p>        
+        <p class="searchable">李佳玲-光明燈：第六排 163</p>        <p class="searchable">趙榮森-光明燈：第六排 165</p>        <p class="searchable">吳秀蓁-光明燈：第六排 166</p>        <p class="searchable">吳慶煌-光明燈：第六排 167</p>        
+        <p class="searchable">趙右景-光明燈：第六排 168</p>        <p class="searchable">趙坊瑜-光明燈：第六排 169</p>        <p class="searchable">蔡黃月笑-光明燈：第六排 170</p>      <p class="searchable">蔡豐安-光明燈：第六排 171</p>        
+        <p class="searchable">蔡宸菲-光明燈：第六排 172</p>        <p class="searchable">蔡豐吉-光明燈：第六排 173</p>        <p class="searchable">陳雅琦-光明燈：第六排 175</p>        <p class="searchable">蔡宸華-光明燈：第六排 176</p>        
+        <p class="searchable">吳炳耀-光明燈：第六排 177</p>        <p class="searchable">吳佳玲-光明燈：第六排 178</p>        <p class="searchable">吳正元-光明燈：第六排 179</p>        <p class="searchable">張承毅-光明燈：第六排 180</p>        
+        <p class="searchable">張麗嬪-光明燈：第六排 181</p>        <p class="searchable">吳佳妍-光明燈：第六排 182</p>        <p class="searchable">蘇詩立-光明燈：第六排 183</p>        <p class="searchable">蘇湘云-光明燈：第六排 185</p>        
+        <p class="searchable">蘇姸禎-光明燈：第六排 186</p>        <p class="searchable">李志傑-光明燈：第六排 187</p>        <p class="searchable">謝春香-光明燈：第七排 001</p>        <p class="searchable">李惠珠-光明燈：第七排 002</p>
+        <p class="searchable">陳慧君-光明燈：第七排 003</p>        <p class="searchable">石晏竺-光明燈：第七排 005</p>        <p class="searchable">石烱偉-光明燈：第七排 006</p>        <p class="searchable">丁躍庭-光明燈：第七排 007</p>
+        <p class="searchable">吳文錦-光明燈：第七排 008</p>        <p class="searchable">蔡麗雪-光明燈：第七排 009</p>        <p class="searchable">吳佳達-光明燈：第七排 010</p>        <p class="searchable">許家福-光明燈：第七排 011</p>
+        <p class="searchable">蔣品嘉-光明燈：第七排 012</p>        <p class="searchable">蔣志齊-光明燈：第七排 013</p>        <p class="searchable">林菊蓮-光明燈：第七排 015</p>        <p class="searchable">莊俊達-光明燈：第七排 016</p>
+        <p class="searchable">莊岱謀-光明燈：第七排 017</p>        <p class="searchable">顏鴻欣-光明燈：第七排 018</p>        <p class="searchable">賴玫如-光明燈：第七排 019</p>        <p class="searchable">顏芷翎-光明燈：第七排 020</p>
+        <p class="searchable">顏士桓-光明燈：第七排 021</p>        <p class="searchable">林惠子-光明燈：第七排 022</p>        <p class="searchable">蔡麗娟-光明燈：第七排 023</p>        <p class="searchable">蕭江山-光明燈：第七排 025</p>
+        <p class="searchable">蕭明宸-光明燈：第七排 026</p>        <p class="searchable">魏君芮-光明燈：第七排 027</p>        <p class="searchable">趙潔怜-光明燈：第七排 028</p>        <p class="searchable">趙婉君-光明燈：第七排 029</p>
+        <p class="searchable">林宣汝-光明燈：第七排 030</p>        <p class="searchable">林宜霈-光明燈：第七排 031</p>        <p class="searchable">張瑗庭-光明燈：第七排 032</p>        <p class="searchable">李禎誠-光明燈：第七排 033</p>
+        <p class="searchable">關淑惠-光明燈：第七排 035</p>        <p class="searchable">張啟明-光明燈：第七排 036</p>        <p class="searchable">劉月美-光明燈：第七排 037</p>        <p class="searchable">張芷翎-光明燈：第七排 038</p>
+        <p class="searchable">張芷妮-光明燈：第七排 039</p>        <p class="searchable">邱得瑋-光明燈：第七排 050</p>        <p class="searchable">林姵伶-光明燈：第七排 051</p>        <p class="searchable">邱宥心-光明燈：第七排 052</p>
+        <p class="searchable">邱宇穆-光明燈：第七排 053</p>        <p class="searchable">陳崇泰-光明燈：第七排 055</p>        <p class="searchable">紀瓊如-光明燈：第七排 056</p>        <p class="searchable">陳永晉-光明燈：第七排 057</p>
+        <p class="searchable">陳奇妘-光明燈：第七排 058</p>        <p class="searchable">詹欣璇-光明燈：第七排 059</p>        <p class="searchable">詹欣瑜-光明燈：第七排 060</p>        <p class="searchable">劉坤明-光明燈：第七排 061</p>
+        <p class="searchable">梁珈嘉-光明燈：第七排 062</p>        <p class="searchable">劉芷麟-光明燈：第七排 063</p>        <p class="searchable">潘雯甄-光明燈：第七排 065</p>        <p class="searchable">高文輝-光明燈：第七排 066</p>
+        <p class="searchable">詹梅雪-光明燈：第七排 067</p>        <p class="searchable">高采暄-光明燈：第七排 068</p>        <p class="searchable">吳俊傑-光明燈：第七排 069</p>        <p class="searchable">陳美麗-光明燈：第七排 070</p>
+        <p class="searchable">吳欉益-光明燈：第七排 071</p>        <p class="searchable">吳庭齊-光明燈：第七排 072</p>        <p class="searchable">羅政文-光明燈：第七排 073</p>        <p class="searchable">羅彥翔-光明燈：第七排 075</p>
+        <p class="searchable">王家男-光明燈：第七排 076</p>        <p class="searchable">陳彩雲-光明燈：第七排 077</p>        <p class="searchable">王軍賀-光明燈：第七排 078</p>        <p class="searchable">王苡甄-光明燈：第七排 079</p>
+        <p class="searchable">陳偉弘-光明燈：第七排 080</p>        <p class="searchable">黃維綉-光明燈：第七排 081</p>        <p class="searchable">陳易承-光明燈：第七排 082</p>        <p class="searchable">吳蔡鴛鴦-光明燈：第七排 083</p>
+        <p class="searchable">陳家聲-光明燈：第七排 085</p>        <p class="searchable">鄭除  -光明燈：第七排 086</p>        <p class="searchable">余胤樂-光明燈：第七排 087</p>        <p class="searchable">陳洛妘-光明燈：第七排 088</p>
+        <p class="searchable">陳瑞聰-光明燈：第七排 089</p>        <p class="searchable">張淑媛-光明燈：第七排 090</p>        <p class="searchable">陳楷文-光明燈：第七排 091</p>        <p class="searchable">楊芷喬-光明燈：第七排 092</p>
+        <p class="searchable">陳芮婧-光明燈：第七排 093</p>        <p class="searchable">徐鳳儀-光明燈：第七排 095</p>        <p class="searchable">徐萬里-光明燈：第七排 096</p>        <p class="searchable">許靜  -光明燈：第七排 097</p>
+        <p class="searchable">徐弘恩-光明燈：第七排 098</p>        <p class="searchable">徐敏恩-光明燈：第七排 099</p>        <p class="searchable">蔡雪蓮-光明燈：第七排 100</p>        <p class="searchable">徐立倫-光明燈：第七排 101</p>
+        <p class="searchable">王熤勛-光明燈：第七排 102</p>        <p class="searchable">王鍈傑-光明燈：第七排 103</p>        <p class="searchable">王家鍇-光明燈：第七排 105</p>        <p class="searchable">王莉雯-光明燈：第七排 106</p>
+        <p class="searchable">林朱龍-光明燈：第七排 107</p>        <p class="searchable">林孝勝-光明燈：第七排 108</p>        <p class="searchable">林全維-光明燈：第七排 109</p>        <p class="searchable">林順國-光明燈：第七排 110</p>
+        <p class="searchable">劉雅文-光明燈：第七排 111</p>        <p class="searchable">廖玉燕-光明燈：第七排 112</p>        <p class="searchable">張毓菁-光明燈：第七排 113</p>        <p class="searchable">張郁萱-光明燈：第七排 115</p>
+        <p class="searchable">張郁娟-光明燈：第七排 116</p>        <p class="searchable">張毓晴-光明燈：第七排 117</p>        <p class="searchable">陳婉琪-光明燈：第七排 118</p>        <p class="searchable">陳德發-光明燈：第七排 119</p>
+        <p class="searchable">陳瑋-光明燈：第七排 120</p>          <p class="searchable">陳潔-光明燈：第七排 121</p>          <p class="searchable">許永文-光明燈：第七排 122</p>        <p class="searchable">許涵柔-光明燈：第七排 123</p>
+        <p class="searchable">許力佑-光明燈：第七排 125</p>        <p class="searchable">許力升-光明燈：第七排 126</p>        <p class="searchable">林婉曲-光明燈：第七排 127</p>        <p class="searchable">吳俊恩-光明燈：第七排 128</p>
+        <p class="searchable">陳柏呈-光明燈：第七排 129</p>        <p class="searchable">陳柏愷-光明燈：第七排 130</p>        <p class="searchable">江怡嫺-光明燈：第七排 131</p>        <p class="searchable">李姵榆-光明燈：第七排 132</p>
+        <p class="searchable">鄭丞佑-光明燈：第七排 133</p>        <p class="searchable">林韋志-光明燈：第七排 135</p>        <p class="searchable">蔡豐德-光明燈：第七排 136</p>        <p class="searchable">劉宗憲-光明燈：第七排 137</p>
+        <p class="searchable">邱意捷-光明燈：第七排 138</p>
+        <!-- 太歲燈 -->
+        <p class="searchable">葉何一-太歲燈：第一排 001</p>        <p class="searchable">陳佳玲-太歲燈：第一排 002</p>        <p class="searchable">葉何恩-太歲燈：第一排 003</p>        <p class="searchable">葉書卉-太歲燈：第一排 005</p>
+        <p class="searchable">潘玫綺-太歲燈：第一排 006</p>        <p class="searchable">李家誠-太歲燈：第一排 007</p>        <p class="searchable">王慶梅-太歲燈：第一排 008</p>        <p class="searchable">陳芷翎-太歲燈：第一排 009</p>
+        <p class="searchable">陳芷萱-太歲燈：第一排 010</p>        <p class="searchable">陳瑞榮-太歲燈：第一排 011</p>        <p class="searchable">吳勁志-太歲燈：第一排 012</p>        <p class="searchable">吳冠德-太歲燈：第一排 013</p>
+        <p class="searchable">蔡和芳-太歲燈：第一排 015</p>        <p class="searchable">焦國貴-太歲燈：第一排 016</p>        <p class="searchable">焦梓瑋-太歲燈：第一排 017</p>        <p class="searchable">焦詠聖-太歲燈：第一排 018</p>
+        <p class="searchable">吳裕豐-太歲燈：第一排 019</p>        <p class="searchable">陳庭梧-太歲燈：第一排 020</p>        <p class="searchable">蔡富博-太歲燈：第一排 021</p>        <p class="searchable">蔡許月華-太歲燈：第一排 022</p>
+        <p class="searchable">朱立帆-太歲燈：第一排 023</p>        <p class="searchable">陳筱妮-太歲燈：第一排 025</p>        <p class="searchable">卓沂嫺-太歲燈：第一排 026</p>        <p class="searchable">蔡羽函-太歲燈：第一排 027</p>
+        <p class="searchable">林宗偉-太歲燈：第一排 028</p>        <p class="searchable">林明照-太歲燈：第一排 029</p>        <p class="searchable">林苡瑄-太歲燈：第一排 030</p>        <p class="searchable">陳桂枝-太歲燈：第一排 031</p>
+        <p class="searchable">蔡瑀文-太歲燈：第一排 032</p>        <p class="searchable">陳玉-太歲燈：第一排 033</p>          <p class="searchable">曾紹舲-太歲燈：第一排 035</p>        <p class="searchable">陳曉琪-太歲燈：第一排 036</p>
+        <p class="searchable">蔡惠霖-太歲燈：第一排 037</p>        <p class="searchable">章元豪-太歲燈：第一排 038</p>        <p class="searchable">章宗任-太歲燈：第一排 039</p>        <p class="searchable">章宗佑-太歲燈：第一排 050</p>
+        <p class="searchable">章景勛-太歲燈：第一排 051</p>        <p class="searchable">吳雅惠-太歲燈：第一排 052</p>        <p class="searchable">章宗立-太歲燈：第一排 053</p>        <p class="searchable">謝詠婕-太歲燈：第一排 055</p>
+        <p class="searchable">吳銘章-太歲燈：第一排 056</p>        <p class="searchable">吳峰旭-太歲燈：第一排 057</p>        <p class="searchable">吳權展-太歲燈：第一排 058</p>        <p class="searchable">吳思瑤-太歲燈：第一排 059</p>
+        <p class="searchable">紀水雲-太歲燈：第一排 060</p>        <p class="searchable">吳梅雀-太歲燈：第一排 061</p>        <p class="searchable">吳剛毅-太歲燈：第一排 062</p>        <p class="searchable">賴進竹-太歲燈：第一排 063</p>
+        <p class="searchable">賴淑娟-太歲燈：第一排 065</p>        <p class="searchable">賴宜均-太歲燈：第一排 066</p>        <p class="searchable">賴家俊-太歲燈：第一排 067</p>        <p class="searchable">賴玟蓁-太歲燈：第一排 068</p>
+        <p class="searchable">劉耀升-太歲燈：第一排 069</p>        <p class="searchable">陳慶隆-太歲燈：第一排 070</p>        <p class="searchable">鄭美英-太歲燈：第一排 071</p>        <p class="searchable">陳進賢-太歲燈：第一排 072</p>
+        <p class="searchable">陳綵湘-太歲燈：第一排 073</p>        <p class="searchable">柯佩宜-太歲燈：第一排 075</p>        <p class="searchable">陳研帆-太歲燈：第一排 076</p>        <p class="searchable">李銘桑-太歲燈：第一排 077</p>
+        <p class="searchable">呂慧君-太歲燈：第一排 078</p>        <p class="searchable">李侑芯-太歲燈：第一排 079</p>        <p class="searchable">李欣穎-太歲燈：第一排 080</p>        <p class="searchable">古亦膳-太歲燈：第一排 081</p>
+        <p class="searchable">古騰心-太歲燈：第一排 082</p>        <p class="searchable">蘇美鳳-太歲燈：第一排 083</p>        <p class="searchable">張光奇-太歲燈：第一排 085</p>        <p class="searchable">張瑀倢-太歲燈：第一排 086</p>
+        <p class="searchable">紀時春-太歲燈：第一排 087</p>        <p class="searchable">紀張淑麗-太歲燈：第一排 088</p>      <p class="searchable">廖榮慶-太歲燈：第一排 089</p>        <p class="searchable">黃仁宗-太歲燈：第一排 090</p>
+        <p class="searchable">黃靖堯-太歲燈：第一排 091</p>        <p class="searchable">黃靖宸-太歲燈：第一排 092</p>        <p class="searchable">劉穎蓁-太歲燈：第一排 093</p>        <p class="searchable">夏于程-太歲燈：第一排 095</p>
+        <p class="searchable">黃柏剛-太歲燈：第一排 096</p>        <p class="searchable">陳雅玲-太歲燈：第一排 097</p>        <p class="searchable">顏志坤-太歲燈：第一排 098</p>        <p class="searchable">陳金玉-太歲燈：第一排 099</p>
+        <p class="searchable">陳誼蓁-太歲燈：第一排 100</p>        <p class="searchable">黃美淑-太歲燈：第一排 101</p>        <p class="searchable">唐佳君-太歲燈：第一排 102</p>        <p class="searchable">王騰慶-太歲燈：第一排 103</p>
+        <p class="searchable">王相閎-太歲燈：第一排 105</p>        <p class="searchable">倪綉蘭-太歲燈：第一排 106</p>        <p class="searchable">賴仕斌-太歲燈：第一排 107</p>        <p class="searchable">黃佩聆-太歲燈：第一排 108</p>
+        <p class="searchable">曾貴群-太歲燈：第一排 109</p>        <p class="searchable">吳美容-太歲燈：第一排 110</p>        <p class="searchable">曾倍宏-太歲燈：第一排 111</p>        <p class="searchable">曾婉婷-太歲燈：第一排 112</p>
+        <p class="searchable">吳祥維-太歲燈：第一排 113</p>        <p class="searchable">李慶祥-太歲燈：第一排 115</p>        <p class="searchable">李世傑-太歲燈：第一排 116</p>        <p class="searchable">柯凰麗-太歲燈：第一排 117</p>
+        <p class="searchable">陳宥辰-太歲燈：第一排 118</p>        <p class="searchable">陳芸禎-太歲燈：第一排 119</p>        <p class="searchable">沈承翰-太歲燈：第一排 120</p>        <p class="searchable">陳郁蓉-太歲燈：第一排 121</p>
+        <p class="searchable">許軒誠-太歲燈：第一排 122</p>        <p class="searchable">王良暉-太歲燈：第一排 123</p>        <p class="searchable">王瀚宇-太歲燈：第一排 125</p>        <p class="searchable">徐郁婷-太歲燈：第一排 126</p>
+        <p class="searchable">蔣品妍-太歲燈：第一排 127</p>        <p class="searchable">蔣予恩-太歲燈：第一排 128</p>        <p class="searchable">劉橙洋-太歲燈：第一排 129</p>        <p class="searchable">陳靜瑜-太歲燈：第一排 130</p>
+        <p class="searchable">陳泰安-太歲燈：第一排 131</p>        <p class="searchable">吳國華-太歲燈：第一排 132</p>        <p class="searchable">吳佳潓-太歲燈：第一排 133</p>        <p class="searchable">郭敏森-太歲燈：第一排 135</p>
+        <p class="searchable">郭東燊-太歲燈：第一排 136</p>        <p class="searchable">莊淨淯-太歲燈：第一排 137</p>        <p class="searchable">陳錦田-太歲燈：第一排 138</p>        <p class="searchable">陳重安-太歲燈：第一排 139</p>
+        <p class="searchable">李雅萍-太歲燈：第一排 150</p>        <p class="searchable">林易麒-太歲燈：第一排 151</p>        <p class="searchable">林易慰-太歲燈：第一排 152</p>        <p class="searchable">林宥彣-太歲燈：第一排 153</p>
+        <p class="searchable">林湘沄-太歲燈：第一排 155</p>        <p class="searchable">蔡旻錫-太歲燈：第一排 156</p>        <p class="searchable">單媛  -太歲燈：第一排 157</p>        <p class="searchable">蔡維哲-太歲燈：第一排 158</p>
+        <p class="searchable">張語晞-太歲燈：第一排 159</p>        <p class="searchable">沈泊樺-太歲燈：第一排 160</p>        <p class="searchable">沈儀安-太歲燈：第一排 161</p>        <p class="searchable">林郁汶-太歲燈：第一排 162</p>
+        <p class="searchable">莊淮閔-太歲燈：第一排 163</p>        <p class="searchable">黃意婷-太歲燈：第一排 165</p>        <p class="searchable">莊秉鋐-太歲燈：第一排 166</p>        <p class="searchable">莊明燊-太歲燈：第一排 167</p>
+        <p class="searchable">吳璁憲-太歲燈：第一排 168</p>        <p class="searchable">吳曉玟-太歲燈：第一排 169</p>        <p class="searchable">吳浚維-太歲燈：第一排 170</p>        <p class="searchable">謝亞娥-太歲燈：第一排 171</p>
+        <p class="searchable">謝政儒-太歲燈：第一排 172</p>        <p class="searchable">賴怡潔-太歲燈：第一排 173</p>        <p class="searchable">東連足-太歲燈：第一排 175</p>        <p class="searchable">盧碧良-太歲燈：第一排 176</p>
+        <p class="searchable">陳秀女-太歲燈：第一排 177</p>        <p class="searchable">王詩閔-太歲燈：第一排 178</p>        <p class="searchable">王彥皓-太歲燈：第二排 001</p>        <p class="searchable">蔡仁傑-太歲燈：第二排 002</p>
+        <p class="searchable">吳國靖-太歲燈：第二排 003</p>        <p class="searchable">黃沛宸-太歲燈：第二排 005</p>        <p class="searchable">祁齡玲-太歲燈：第二排 006</p>        <p class="searchable">林文忠-太歲燈：第二排 007</p>
+        <p class="searchable">林姝言-太歲燈：第二排 008</p>        <p class="searchable">林茂杰-太歲燈：第二排 009</p>        <p class="searchable">林秉豪-太歲燈：第二排 010</p>        <p class="searchable">陳建和-太歲燈：第二排 011</p>
+        <p class="searchable">朱玫璇-太歲燈：第二排 012</p>        <p class="searchable">邱顯癸-太歲燈：第二排 013</p>        <p class="searchable">陳秀娥-太歲燈：第二排 015</p>        <p class="searchable">邱炫宗-太歲燈：第二排 016</p>
+        <p class="searchable">邱郁誠-太歲燈：第二排 017</p>        <p class="searchable">何芷儀-太歲燈：第二排 018</p>        <p class="searchable">邱柄叡-太歲燈：第二排 019</p>        <p class="searchable">李瑋馨-太歲燈：第二排 020</p>
+        <p class="searchable">陳璿仁-太歲燈：第二排 021</p>        <p class="searchable">陳卓霆-太歲燈：第二排 022</p>        <p class="searchable">吳國-太歲燈：第二排 023</p>          <p class="searchable">吳孟玉-太歲燈：第二排 025</p>
+        <p class="searchable">吳得逢-太歲燈：第二排 026</p>        <p class="searchable">吳瑩萱-太歲燈：第二排 027</p>        <p class="searchable">黃明軒-太歲燈：第二排 028</p>        <p class="searchable">楊淵中-太歲燈：第二排 029</p>
+        <p class="searchable">陳嘉浤-太歲燈：第二排 030</p>        <p class="searchable">賴琴瑜-太歲燈：第二排 031</p>        <p class="searchable">陳彥翰-太歲燈：第二排 032</p>        <p class="searchable">陳彥樺-太歲燈：第二排 033</p>
+        <p class="searchable">陳巧紜-太歲燈：第二排 035</p>        <p class="searchable">吳翊慈-太歲燈：第二排 036</p>        <p class="searchable">吳麗香-太歲燈：第二排 037</p>        <p class="searchable">林尚泓-太歲燈：第二排 038</p>
+        <p class="searchable">林姍諭-太歲燈：第二排 039</p>        <p class="searchable">王秀雲-太歲燈：第二排 050</p>        <p class="searchable">吳燕林-太歲燈：第二排 051</p>        <p class="searchable">吳思節-太歲燈：第二排 052</p>
+        <p class="searchable">王世賢-太歲燈：第二排 053</p>        <p class="searchable">陳益廷-太歲燈：第二排 055</p>        <p class="searchable">謝旺財-太歲燈：第二排 056</p>        <p class="searchable">鄭茗云-太歲燈：第二排 057</p>
+        <p class="searchable">謝心莉-太歲燈：第二排 058</p>        <p class="searchable">謝景旭-太歲燈：第二排 059</p>        <p class="searchable">謝進原-太歲燈：第二排 060</p>        <p class="searchable">謝進偉-太歲燈：第二排 061</p>
+        <p class="searchable">謝右新-太歲燈：第二排 062</p>        <p class="searchable">高慶福-太歲燈：第二排 063</p>        <p class="searchable">徐君明-太歲燈：第二排 065</p>        <p class="searchable">曾方盈-太歲燈：第二排 066</p>
+        <p class="searchable">謝嘉銘-太歲燈：第二排 067</p>        <p class="searchable">張琼美-太歲燈：第二排 068</p>        <p class="searchable">謝芯楀-太歲燈：第二排 069</p>        <p class="searchable">何名凱-太歲燈：第二排 070</p>
+        <p class="searchable">陳莉珍-太歲燈：第二排 071</p>        <p class="searchable">白世照-太歲燈：第二排 072</p>        <p class="searchable">曾詩雅-太歲燈：第二排 073</p>        <p class="searchable">白宗育-太歲燈：第二排 075</p>
+        <p class="searchable">白旻靄-太歲燈：第二排 076</p>        <p class="searchable">卓彥宏-太歲燈：第二排 077</p>        <p class="searchable">王志寬-太歲燈：第二排 078</p>        <p class="searchable">葉燕樺-太歲燈：第二排 079</p>
+        <p class="searchable">陳立瑋-太歲燈：第二排 080</p>        <p class="searchable">林郁婕-太歲燈：第二排 081</p>        <p class="searchable">吳勝五-太歲燈：第二排 082</p>        <p class="searchable">蔡其輝-太歲燈：第二排 083</p>
+        <p class="searchable">蔡顯壕-太歲燈：第二排 085</p>        <p class="searchable">關志隆-太歲燈：第二排 086</p>        <p class="searchable">林美玲-太歲燈：第二排 087</p>        <p class="searchable">林正諺-太歲燈：第二排 088</p>
+        <p class="searchable">陳霈柔-太歲燈：第二排 089</p>        <p class="searchable">陳文隆-太歲燈：第二排 090</p>        <p class="searchable">吳胤-太歲燈：第二排 091</p>          <p class="searchable">蔣右貞-太歲燈：第二排 092</p>
+        <p class="searchable">吳乙叡-太歲燈：第二排 093</p>        <p class="searchable">吳乙霖-太歲燈：第二排 095</p>        <p class="searchable">邱竣禾-太歲燈：第二排 096</p>        <p class="searchable">林蕊-太歲燈：第二排 097</p>
+        <p class="searchable">童啓煌-太歲燈：第二排 098</p>        <p class="searchable">童煥強-太歲燈：第二排 099</p>        <p class="searchable">林美珠-太歲燈：第二排 100</p>        <p class="searchable">劉怡婷-太歲燈：第二排 101</p>
+        <p class="searchable">林美華-太歲燈：第二排 102</p>        <p class="searchable">陳雅琦-太歲燈：第二排 103</p>        <p class="searchable">童丁卯-太歲燈：第二排 105</p>        <p class="searchable">陳素密-太歲燈：第二排 106</p>
+        <p class="searchable">童美雯-太歲燈：第二排 107</p>        <p class="searchable">黃思瑀-太歲燈：第二排 108</p>        <p class="searchable">曲晨涵-太歲燈：第二排 109</p>        <p class="searchable">吳洋銘-太歲燈：第二排 110</p>
+        <p class="searchable">吳暉庫-太歲燈：第二排 111</p>        <p class="searchable">吳亞諭-太歲燈：第二排 112</p>        <p class="searchable">吳律葳-太歲燈：第二排 113</p>        <p class="searchable">謝雨容-太歲燈：第二排 115</p>
+        <p class="searchable">吳采宸-太歲燈：第二排 116</p>        <p class="searchable">吳清福-太歲燈：第二排 117</p>        <p class="searchable">梁綠-太歲燈：第二排 118</p>          <p class="searchable">劉育志-太歲燈：第二排 119</p>
+        <p class="searchable">王玉瑋-太歲燈：第二排 120</p>        <p class="searchable">吳銘煌-太歲燈：第二排 121</p>        <p class="searchable">林雪梨-太歲燈：第二排 122</p>        <p class="searchable">吳晁杰-太歲燈：第二排 123</p>
+        <p class="searchable">吳昌翰-太歲燈：第二排 125</p>        <p class="searchable">吳亭儀-太歲燈：第二排 126</p>        <p class="searchable">陳泓銘-太歲燈：第二排 127</p>        <p class="searchable">陳品澄-太歲燈：第二排 128</p>
+        <p class="searchable">吳國棟-太歲燈：第二排 129</p>        <p class="searchable">吳丁山-太歲燈：第二排 130</p>        <p class="searchable">吳梓旭-太歲燈：第二排 131</p>        <p class="searchable">陳志豪-太歲燈：第二排 132</p>
+        <p class="searchable">王昭娟-太歲燈：第二排 133</p>        <p class="searchable">陳宥瑞-太歲燈：第二排 135</p>        <p class="searchable">劉秀金-太歲燈：第二排 136</p>        <p class="searchable">洪翠鴻-太歲燈：第二排 137</p>
+        <p class="searchable">王錫輝-太歲燈：第二排 138</p>        <p class="searchable">羅捷穎-太歲燈：第二排 139</p>        <p class="searchable">林苡晴-太歲燈：第二排 150</p>        <p class="searchable">羅貫睿-太歲燈：第二排 151</p>
+        <p class="searchable">羅梓芯-太歲燈：第二排 152</p>        <p class="searchable">潘同勝-太歲燈：第二排 153</p>        <p class="searchable">潘抒涵-太歲燈：第二排 155</p>        <p class="searchable">潘維揚-太歲燈：第二排 156</p>
+        <p class="searchable">郭倍華-太歲燈：第二排 157</p>        <p class="searchable">林秉曜-太歲燈：第二排 158</p>        <p class="searchable">童志量-太歲燈：第二排 159</p>        <p class="searchable">游月娥-太歲燈：第二排 160</p>
+        <p class="searchable">童彥松-太歲燈：第二排 161</p>        <p class="searchable">吳美麗-太歲燈：第二排 162</p>        <p class="searchable">童秋元-太歲燈：第二排 163</p>        <p class="searchable">劉美娥-太歲燈：第二排 165</p>
+        <p class="searchable">陳湘義-太歲燈：第二排 166</p>        <p class="searchable">陳寬益-太歲燈：第二排 167</p>        <p class="searchable">黃盈穎-太歲燈：第二排 168</p>        <p class="searchable">陳寬庭-太歲燈：第二排 169</p>
+        <p class="searchable">蔡佳良-太歲燈：第二排 170</p>        <p class="searchable">陳玥霓-太歲燈：第二排 171</p>        <p class="searchable">洪榮傑-太歲燈：第二排 173</p>        <p class="searchable">洪佾妡-太歲燈：第二排 175</p>
+        <p class="searchable">洪湲琋-太歲燈：第二排 176</p>        <p class="searchable">何嘉寧-太歲燈：第二排 177</p>        <p class="searchable">洪嘉新-太歲燈：第二排 178</p>        <p class="searchable">洪嘉亨-太歲燈：第三排 001</p>
+        <p class="searchable">洪文蘭-太歲燈：第三排 002</p>        <p class="searchable">洪榮廷-太歲燈：第三排 003</p>        <p class="searchable">楊金煜-太歲燈：第三排 005</p>        <p class="searchable">楊詠傑-太歲燈：第三排 006</p>
+        <p class="searchable">楊文賢-太歲燈：第三排 007</p>        <p class="searchable">李秀美-太歲燈：第三排 008</p>        <p class="searchable">楊雅惠-太歲燈：第三排 009</p>        <p class="searchable">趙如玉-太歲燈：第三排 010</p>
+        <p class="searchable">王姮蓁-太歲燈：第三排 011</p>        <p class="searchable">王芃諭-太歲燈：第三排 012</p>        <p class="searchable">莊學宗-太歲燈：第三排 013</p>        <p class="searchable">童淑萍-太歲燈：第三排 015</p>
+        <p class="searchable">童淑卿-太歲燈：第三排 016</p>        <p class="searchable">陳羿霏-太歲燈：第三排 017</p>        <p class="searchable">陳宇程-太歲燈：第三排 018</p>        <p class="searchable">吳偉正-太歲燈：第三排 019</p>
+        <p class="searchable">甘嘉婷-太歲燈：第三排 020</p>        <p class="searchable">吳雅婷-太歲燈：第三排 021</p>        <p class="searchable">吳婕寧-太歲燈：第三排 022</p>        <p class="searchable">萬先寰-太歲燈：第三排 023</p>
+        <p class="searchable">蔡宇鵬-太歲燈：第三排 025</p>        <p class="searchable">蔡秉宏-太歲燈：第三排 026</p>        <p class="searchable">蔡茂鎮-太歲燈：第三排 027</p>        <p class="searchable">林吳月桃-太歲燈：第三排 028</p>
+        <p class="searchable">高千雅-太歲燈：第三排 029</p>        <p class="searchable">張晨洋-太歲燈：第三排 030</p>        <p class="searchable">吳旻珊-太歲燈：第三排 031</p>        <p class="searchable">陳慶安-太歲燈：第三排 032</p>
+        <p class="searchable">吳梁傑-太歲燈：第三排 033</p>        <p class="searchable">吳宜芳-太歲燈：第三排 035</p>        <p class="searchable">吳昌益-太歲燈：第三排 036</p>        <p class="searchable">曾俞姍-太歲燈：第三排 037</p>
+        <p class="searchable">邱欣怡-太歲燈：第三排 038</p>        <p class="searchable">黃文鴻-太歲燈：第三排 039</p>        <p class="searchable">余美蘭-太歲燈：第三排 050</p>        <p class="searchable">林雪裡-太歲燈：第三排 051</p>
+        <p class="searchable">吳翊婷-太歲燈：第三排 052</p>        <p class="searchable">李承臻-太歲燈：第三排 053</p>        <p class="searchable">李建樂-太歲燈：第三排 055</p>        <p class="searchable">鄭莉琪-太歲燈：第三排 056</p>
+        <p class="searchable">王俐婷-太歲燈：第三排 057</p>        <p class="searchable">陳柏豪-太歲燈：第三排 058</p>        <p class="searchable">于樹卿-太歲燈：第三排 059</p>        <p class="searchable">陳志忠-太歲燈：第三排 060</p>
+        <p class="searchable">陳士翔-太歲燈：第三排 061</p>        <p class="searchable">謝嘉如-太歲燈：第三排 062</p>        <p class="searchable">陳思妤-太歲燈：第三排 063</p>        <p class="searchable">吳清文-太歲燈：第三排 065</p>
+        <p class="searchable">林秀昭-太歲燈：第三排 066</p>        <p class="searchable">吳宜璇-太歲燈：第三排 067</p>        <p class="searchable">吳靖纂-太歲燈：第三排 068</p>        <p class="searchable">吳沛璇-太歲燈：第三排 069</p>
+        <p class="searchable">李美香-太歲燈：第三排 070</p>        <p class="searchable">陳可欣-太歲燈：第三排 071</p>        <p class="searchable">韋昌甫-太歲燈：第三排 072</p>        <p class="searchable">陳巧欣-太歲燈：第三排 073</p>
+        <p class="searchable">韋昕辰-太歲燈：第三排 075</p>        <p class="searchable">陳瑀瑭-太歲燈：第三排 076</p>        <p class="searchable">羅元德-太歲燈：第三排 077</p>        <p class="searchable">羅巧芸-太歲燈：第三排 078</p>
+        <p class="searchable">李麗雪-太歲燈：第三排 079</p>        <p class="searchable">陳宇峰-太歲燈：第三排 080</p>        <p class="searchable">王家萁-太歲燈：第三排 081</p>        <p class="searchable">陳宥宥-太歲燈：第三排 082</p>
+        <p class="searchable">呂文佐-太歲燈：第三排 083</p>        <p class="searchable">洪思怡-太歲燈：第三排 085</p>        <p class="searchable">冬妍濬-太歲燈：第三排 086</p>        <p class="searchable">賴瓊如-太歲燈：第三排 087</p>
+        <p class="searchable">王鵬竣-太歲燈：第三排 088</p>        <p class="searchable">林雅琳-太歲燈：第三排 089</p>        <p class="searchable">王彥翔-太歲燈：第三排 090</p>        <p class="searchable">謝昆成-太歲燈：第三排 091</p>
+        <p class="searchable">陳菱雅-太歲燈：第三排 092</p>        <p class="searchable">吳心瑜-太歲燈：第三排 093</p>        <p class="searchable">閻紹琴-太歲燈：第三排 095</p>        <p class="searchable">王俐婷-太歲燈：第三排 096</p>
+        <p class="searchable">邱竹原-太歲燈：第三排 097</p>        <p class="searchable">陳吳綉雲-太歲燈：第三排 098</p>      <p class="searchable">陳瑞敏-太歲燈：第三排 099</p>        <p class="searchable">詹欣宜-太歲燈：第三排 100</p>
+        <p class="searchable">劉耘妤-太歲燈：第三排 101</p>        <p class="searchable">黃允恩-太歲燈：第三排 102</p>        <p class="searchable">張耿彬-太歲燈：第三排 103</p>        <p class="searchable">張慧真-太歲燈：第三排 105</p>
+        <p class="searchable">陳濱賢-太歲燈：第三排 106</p>        <p class="searchable">李幸芳-太歲燈：第三排 107</p>        <p class="searchable">陳凱郁-太歲燈：第三排 108</p>        <p class="searchable">王馨婉-太歲燈：第三排 109</p>
+        <p class="searchable">林芳儀-太歲燈：第三排 110</p>        <p class="searchable">陳玟旭-太歲燈：第三排 111</p>        <p class="searchable">周明郁-太歲燈：第三排 112</p>        <p class="searchable">蔡明志-太歲燈：第三排 113</p>
+        <p class="searchable">蔡潔欣-太歲燈：第三排 115</p>        <p class="searchable">蔡傑豪-太歲燈：第三排 116</p>        <p class="searchable">賴律塵-太歲燈：第三排 117</p>        <p class="searchable">嚴喬筠-太歲燈：第三排 118</p>
+        <p class="searchable">楊正吉-太歲燈：第三排 119</p>        <p class="searchable">張任榮-太歲燈：第三排 120</p>        <p class="searchable">張鈞凱-太歲燈：第三排 121</p>        <p class="searchable">李沛蓉-太歲燈：第三排 122</p>
+        <p class="searchable">吳雨潔-太歲燈：第三排 123</p>        <p class="searchable">鄭麗珠-太歲燈：第三排 125</p>        <p class="searchable">余炳勳-太歲燈：第三排 126</p>        <p class="searchable">劉品妤-太歲燈：第三排 127</p>
+        <p class="searchable">蕭碧鳳-太歲燈：第三排 128</p>        <p class="searchable">黃桂樹-太歲燈：第三排 129</p>        <p class="searchable">陳秀吻-太歲燈：第三排 130</p>        <p class="searchable">王琳筠-太歲燈：第三排 131</p>
+        <p class="searchable">楊恆禎-太歲燈：第三排 132</p>        <p class="searchable">楊佳璋-太歲燈：第三排 133</p>        <p class="searchable">劉芷瑄-太歲燈：第三排 135</p>        <p class="searchable">顏清吉-太歲燈：第三排 136</p>
+        <p class="searchable">陳怡秀-太歲燈：第三排 137</p>        <p class="searchable">顏志勝-太歲燈：第三排 138</p>        <p class="searchable">陳志宇-太歲燈：第三排 139</p>        <p class="searchable">陳尚瑋-太歲燈：第三排 150</p>
+        <p class="searchable">洪秀梅-太歲燈：第三排 151</p>        <p class="searchable">康月珠-太歲燈：第三排 152</p>        <p class="searchable">葉宥菘-太歲燈：第三排 153</p>        <p class="searchable">葉修誠-太歲燈：第三排 155</p>
+        <p class="searchable">黃湘芸-太歲燈：第三排 156</p>        <p class="searchable">劉財壽-太歲燈：第三排 157</p>        <p class="searchable">劉浚琪-太歲燈：第三排 158</p>        <p class="searchable">劉貞鈺-太歲燈：第三排 159</p>
+        <p class="searchable">劉廖秀英-太歲燈：第三排 160</p>      <p class="searchable">楊淑如-太歲燈：第三排 161</p>        <p class="searchable">黃棋杰-太歲燈：第三排 162</p>        <p class="searchable">黃羿閔-太歲燈：第三排 163</p>
+        <p class="searchable">黃郁晴-太歲燈：第三排 165</p>        <p class="searchable">陳韋如-太歲燈：第三排 166</p>        <p class="searchable">張泊文-太歲燈：第三排 167</p>        <p class="searchable">張承恩-太歲燈：第三排 168</p>
+        <p class="searchable">謝繐羽-太歲燈：第三排 169</p>        <p class="searchable">劉至凱-太歲燈：第三排 170</p>        <p class="searchable">李綉珠-太歲燈：第三排 171</p>        <p class="searchable">矯伊玲-太歲燈：第三排 172</p>
+        <p class="searchable">陳垣智-太歲燈：第三排 173</p>        <p class="searchable">陳佳虎-太歲燈：第三排 175</p>        <p class="searchable">段美昭-太歲燈：第三排 176</p>        <p class="searchable">劉恒卉-太歲燈：第三排 177</p>
+        <p class="searchable">劉恒嘉-太歲燈：第三排 178</p>        <p class="searchable">陳亭諭-太歲燈：第五排 001</p>        <p class="searchable">陳益源-太歲燈：第五排 002</p>        <p class="searchable">徐秀園-太歲燈：第五排 003</p>
+        <p class="searchable">林友邦-太歲燈：第五排 005</p>        <p class="searchable">林銘麒-太歲燈：第五排 006</p>        <p class="searchable">林采緹-太歲燈：第五排 007</p>        <p class="searchable">林宏澤-太歲燈：第五排 008</p>
+        <p class="searchable">吳景文-太歲燈：第五排 009</p>        <p class="searchable">蔡佳妤-太歲燈：第五排 010</p>        <p class="searchable">賴慧霞-太歲燈：第五排 011</p>        <p class="searchable">陳宛琳-太歲燈：第五排 012</p>
+        <p class="searchable">高銘葦-太歲燈：第五排 013</p>        <p class="searchable">黃蔡靜-太歲燈：第五排 015</p>        <p class="searchable">吳國弘-太歲燈：第五排 016</p>        <p class="searchable">劉宥辰-太歲燈：第五排 017</p>
+        <p class="searchable">吳若凡-太歲燈：第五排 018</p>        <p class="searchable">吳日恆-太歲燈：第五排 019</p>        <p class="searchable">葉國順-太歲燈：第五排 020</p>        <p class="searchable">洪筱涵-太歲燈：第五排 021</p>
+        <p class="searchable">余鴻慶-太歲燈：第五排 022</p>        <p class="searchable">王桂花-太歲燈：第五排 023</p>        <p class="searchable">余佳璋-太歲燈：第五排 025</p>        <p class="searchable">余品璇-太歲燈：第五排 026</p>
+        <p class="searchable">陳麗芳-太歲燈：第五排 027</p>        <p class="searchable">張家裕-太歲燈：第五排 028</p>        <p class="searchable">張子洋-太歲燈：第五排 029</p>        <p class="searchable">張愷紜-太歲燈：第五排 030</p>
+        <p class="searchable">陳儀真-太歲燈：第五排 031</p>        <p class="searchable">紀沁嵐-太歲燈：第五排 032</p>        <p class="searchable">黃信子-太歲燈：第五排 033</p>        <p class="searchable">邱源輝-太歲燈：第五排 035</p>
+        <p class="searchable">蔡鳳玉-太歲燈：第五排 036</p>        <p class="searchable">王億宸-太歲燈：第五排 037</p>        <p class="searchable">王子弦-太歲燈：第五排 038</p>        <p class="searchable">洪子峯-太歲燈：第五排 039</p>
+        <p class="searchable">陳靜寶-太歲燈：第五排 050</p>        <p class="searchable">洪啓恩-太歲燈：第五排 051</p>        <p class="searchable">洪晨偉-太歲燈：第五排 052</p>        <p class="searchable">楊淑珍-太歲燈：第五排 053</p>
+        <p class="searchable">胡凱翔-太歲燈：第五排 055</p>        <p class="searchable">張彩雲-太歲燈：第五排 056</p>        <p class="searchable">吳魏彬-太歲燈：第五排 057</p>        <p class="searchable">張詠蒂-太歲燈：第五排 058</p>
+        <p class="searchable">趙芷卉-太歲燈：第五排 059</p>        <p class="searchable">周靜涵-太歲燈：第五排 060</p>        <p class="searchable">周靖瑩-太歲燈：第五排 061</p>        <p class="searchable">趙梦雯-太歲燈：第五排 062</p>
+        <p class="searchable">林順國-太歲燈：第五排 063</p>        <p class="searchable">留嘉陽-太歲燈：第五排 065</p>        <p class="searchable">吳芝瑩-太歲燈：第五排 066</p>        <p class="searchable">羅春生-太歲燈：第五排 067</p>
+        <p class="searchable">梁月-太歲燈：第五排 068</p>          <p class="searchable">陳建興-太歲燈：第五排 069</p>        <p class="searchable">陳建邦-太歲燈：第五排 070</p>        <p class="searchable">陳建雄-太歲燈：第五排 071</p>
+        <p class="searchable">陳建華-太歲燈：第五排 072</p>        <p class="searchable">陳伯俊-太歲燈：第五排 073</p>        <p class="searchable">蕭博升-太歲燈：第五排 075</p>        <p class="searchable">蕭百淳-太歲燈：第五排 076</p>
+        <p class="searchable">陳誌偉-太歲燈：第五排 077</p>        <p class="searchable">李登豐-太歲燈：第五排 078</p>        <p class="searchable">洪敏純-太歲燈：第五排 079</p>        <p class="searchable">吳存仁-太歲燈：第五排 080</p>
+        <p class="searchable">廖顯崇-太歲燈：第五排 081</p>        <p class="searchable">賴金星-太歲燈：第五排 082</p>        <p class="searchable">賴佳芝-太歲燈：第五排 083</p>        <p class="searchable">洪心甯-太歲燈：第五排 085</p>
+        <p class="searchable">廖秀英-太歲燈：第五排 086</p>        <p class="searchable">王雅玲-太歲燈：第五排 087</p>        <p class="searchable">林昱辰-太歲燈：第五排 088</p>        <p class="searchable">謝志彬-太歲燈：第五排 089</p>
+        <p class="searchable">李姵榆-太歲燈：第五排 090</p>        <p class="searchable">謝秉榮-太歲燈：第五排 091</p>        <p class="searchable">謝雅嫻-太歲燈：第五排 092</p>        <p class="searchable">陳阿幼-太歲燈：第五排 093</p>
+        <p class="searchable">周妤庭-太歲燈：第五排 095</p>        <p class="searchable">陳眃-太歲燈：第五排 096</p>         <p class="searchable">林志昇-太歲燈：第五排 097</p>        <p class="searchable">張惠茹-太歲燈：第五排 098</p>
+        <p class="searchable">林政霆-太歲燈：第五排 099</p>        <p class="searchable">曾能聰-太歲燈：第五排 100</p>        <p class="searchable">洪淑娟-太歲燈：第五排 101</p>        <p class="searchable">洪秀婷-太歲燈：第五排 102</p>
+        <p class="searchable">洪偉育-太歲燈：第五排 103</p>        <p class="searchable">林琮溢-太歲燈：第五排 105</p>        <p class="searchable">謝小惠-太歲燈：第五排 106</p>        <p class="searchable">吳哲緯-太歲燈：第五排 107</p>
+        <p class="searchable">王敏諭-太歲燈：第五排 108</p>        <p class="searchable">王慧美-太歲燈：第五排 109</p>        <p class="searchable">吳曉妮-太歲燈：第五排 110</p>        <p class="searchable">江明娟-太歲燈：第五排 111</p>
+        <p class="searchable">蔡育勳-太歲燈：第五排 112</p>        <p class="searchable">蔡孟芝-太歲燈：第五排 113</p>        <p class="searchable">陳大豐-太歲燈：第五排 115</p>        <p class="searchable">鄭瑞惠-太歲燈：第五排 116</p>
+        <p class="searchable">陳紓綺-太歲燈：第五排 117</p>        <p class="searchable">王衍仁-太歲燈：第五排 118</p>        <p class="searchable">何佩純-太歲燈：第五排 119</p>        <p class="searchable">王羽萱-太歲燈：第五排 120</p>
+        <p class="searchable">王正杉-太歲燈：第五排 121</p>        <p class="searchable">王童素雲-太歲燈：第五排 122</p>      <p class="searchable">饒鈺渝-太歲燈：第五排 123</p>        <p class="searchable">吳偉碩-太歲燈：第五排 125</p>
+        <p class="searchable">吳家睿-太歲燈：第五排 126</p>        <p class="searchable">周訂良-太歲燈：第五排 127</p>        <p class="searchable">林雅芳-太歲燈：第五排 128</p>        <p class="searchable">周芷彤-太歲燈：第五排 129</p>
+        <p class="searchable">賴靜怡-太歲燈：第五排 130</p>        <p class="searchable">陳思妤-太歲燈：第五排 131</p>        <p class="searchable">張宇希-太歲燈：第五排 132</p>        <p class="searchable">林伃恩-太歲燈：第五排 133</p>
+        <p class="searchable">陳柏志-太歲燈：第五排 135</p>        <p class="searchable">潘子濠-太歲燈：第五排 136</p>        <p class="searchable">陳秀鳳-太歲燈：第五排 137</p>        <p class="searchable">黃于萍-太歲燈：第五排 138</p>
+        <p class="searchable">江鴻昌-太歲燈：第五排 139</p>        <p class="searchable">王志生-太歲燈：第五排 150</p>        <p class="searchable">王宏裕-太歲燈：第五排 151</p>        <p class="searchable">鄭柔妘-太歲燈：第五排 152</p>
+        <p class="searchable">林志明-太歲燈：第五排 153</p>        <p class="searchable">陳淑汝-太歲燈：第五排 155</p>        <p class="searchable">洪素嬌-太歲燈：第五排 156</p>        <p class="searchable">張秀鳳-太歲燈：第五排 157</p>
+        <p class="searchable">林俊雄-太歲燈：第五排 158</p>        <p class="searchable">林巧馨-太歲燈：第五排 159</p>        <p class="searchable">林奕盛-太歲燈：第五排 160</p>        <p class="searchable">劉瑩翔-太歲燈：第五排 161</p>
+        <p class="searchable">李呂素卿-太歲燈：第五排 162</p>      <p class="searchable">李鳳鵑-太歲燈：第五排 163</p>        <p class="searchable">藍江蜜-太歲燈：第五排 165</p>        <p class="searchable">藍和尉-太歲燈：第五排 166</p>
+        <p class="searchable">曾貴香-太歲燈：第五排 167</p>        <p class="searchable">藍元君-太歲燈：第五排 168</p>        <p class="searchable">藍婕寧-太歲燈：第五排 169</p>        <p class="searchable">呂文通-太歲燈：第五排 170</p>
+        <p class="searchable">呂欣穎-太歲燈：第五排 171</p>        <p class="searchable">呂依穎-太歲燈：第五排 172</p>        <p class="searchable">謝萬彰-太歲燈：第五排 173</p>        <p class="searchable">謝炳利-太歲燈：第五排 175</p>
+        <p class="searchable">林金蓮-太歲燈：第五排 176</p>        <p class="searchable">李瓊珠-太歲燈：第五排 177</p>        <p class="searchable">劉光維-太歲燈：第五排 178</p>        <p class="searchable">李依容-太歲燈：第六排 001</p>
+        <p class="searchable">吳金柱-太歲燈：第六排 002</p>        <p class="searchable">吳晏榕-太歲燈：第六排 003</p>        <p class="searchable">吳欣怡-太歲燈：第六排 005</p>        <p class="searchable">羅明順-太歲燈：第六排 006</p>
+        <p class="searchable">吳怡蓉-太歲燈：第六排 007</p>        <p class="searchable">朱怡璇-太歲燈：第六排 008</p>        <p class="searchable">王文芳-太歲燈：第六排 009</p>        <p class="searchable">吳依璇-太歲燈：第六排 010</p>
+        <p class="searchable">吳曼筠-太歲燈：第六排 011</p>        <p class="searchable">胡柜澍-太歲燈：第六排 012</p>        <p class="searchable">張雅如-太歲燈：第六排 013</p>        <p class="searchable">鄭健緯-太歲燈：第六排 015</p>
+        <p class="searchable">李佳芸-太歲燈：第六排 016</p>        <p class="searchable">李苡歆-太歲燈：第六排 017</p>        <p class="searchable">吳宥蓁-太歲燈：第六排 018</p>        <p class="searchable">李知恩-太歲燈：第六排 019</p>
+        <p class="searchable">林進來-太歲燈：第六排 020</p>        <p class="searchable">林珮玉-太歲燈：第六排 021</p>        <p class="searchable">吳文靜-太歲燈：第六排 022</p>        <p class="searchable">廖元輔-太歲燈：第六排 023</p>
+        <p class="searchable">廖韋丞-太歲燈：第六排 025</p>        <p class="searchable">張謹富-太歲燈：第六排 026</p>        <p class="searchable">張紜禎-太歲燈：第六排 027</p>        <p class="searchable">吳嚴盆-太歲燈：第六排 028</p>
+        <p class="searchable">吳哲豪-太歲燈：第六排 029</p>        <p class="searchable">吳哲誠-太歲燈：第六排 030</p>        <p class="searchable">吳羽茹-太歲燈：第六排 031</p>        <p class="searchable">蔡顓宇-太歲燈：第六排 032</p>
+        <p class="searchable">林文懿-太歲燈：第六排 033</p>        <p class="searchable">謝清廉-太歲燈：第六排 035</p>        <p class="searchable">葉美江-太歲燈：第六排 036</p>        <p class="searchable">謝承浩-太歲燈：第六排 037</p>
+        <p class="searchable">趙榮森-太歲燈：第六排 038</p>        <p class="searchable">吳秀蓁-太歲燈：第六排 039</p>        <p class="searchable">吳慶煌-太歲燈：第六排 050</p>        <p class="searchable">趙右景-太歲燈：第六排 051</p>
+        <p class="searchable">吳眞雄-太歲燈：第六排 052</p>        <p class="searchable">吳榮愷-太歲燈：第六排 053</p>        <p class="searchable">蔡成田-太歲燈：第六排 055</p>        <p class="searchable">蔡豐吉-太歲燈：第六排 056</p>
+        <p class="searchable">陳雅琦-太歲燈：第六排 057</p>        <p class="searchable">蔡宸華-太歲燈：第六排 058</p>        <p class="searchable">張承毅-太歲燈：第六排 059</p>        <p class="searchable">吳佳妍-太歲燈：第六排 060</p>
+        <p class="searchable">張詹吟-太歲燈：第六排 061</p>        <p class="searchable">陳宏霞-太歲燈：第六排 062</p>        <p class="searchable">陳淑娟-太歲燈：第六排 063</p>        <p class="searchable">陳俊源-太歲燈：第六排 065</p>
+        <p class="searchable">林夆憲-太歲燈：第六排 066</p>        <p class="searchable">蘇湘云-太歲燈：第六排 067</p>        <p class="searchable">仰瓊宜-太歲燈：第六排 068</p>        <p class="searchable">丁躍庭-太歲燈：第六排 069</p>
+        <p class="searchable">許宜恩-太歲燈：第六排 070</p>        <p class="searchable">蔡麗雪-太歲燈：第六排 071</p>        <p class="searchable">許宗德-太歲燈：第六排 072</p>        <p class="searchable">曾文姿-太歲燈：第六排 073</p>
+        <p class="searchable">許家福-太歲燈：第六排 075</p>        <p class="searchable">林金蓮-太歲燈：第六排 076</p>        <p class="searchable">蔣志齊-太歲燈：第六排 077</p>        <p class="searchable">林進坤-太歲燈：第六排 078</p>
+        <p class="searchable">林莉玲-太歲燈：第六排 079</p>        <p class="searchable">林建智-太歲燈：第六排 080</p>        <p class="searchable">陳宥羽-太歲燈：第六排 081</p>        <p class="searchable">莊俊達-太歲燈：第六排 082</p>
+        <p class="searchable">莊岱謀-太歲燈：第六排 083</p>        <p class="searchable">莊允筑-太歲燈：第六排 085</p>        <p class="searchable">賴玫如-太歲燈：第六排 086</p>        <p class="searchable">顏士桓-太歲燈：第六排 087</p>
+        <p class="searchable">林雅萍-太歲燈：第六排 088</p>        <p class="searchable">林則有-太歲燈：第六排 089</p>        <p class="searchable">林柏澄-太歲燈：第六排 090</p>        <p class="searchable">陳福枝-太歲燈：第六排 091</p>
+        <p class="searchable">陳文鴻-太歲燈：第六排 092</p>        <p class="searchable">陳文龍-太歲燈：第六排 093</p>        <p class="searchable">陳靜柔-太歲燈：第六排 095</p>        <p class="searchable">洪淑玲-太歲燈：第六排 096</p>
+        <p class="searchable">蔡麗娟-太歲燈：第六排 097</p>        <p class="searchable">黃玉善-太歲燈：第六排 098</p>        <p class="searchable">林育民-太歲燈：第六排 099</p>        <p class="searchable">黃元亭-太歲燈：第六排 100</p>
+        <p class="searchable">林聰吉-太歲燈：第六排 101</p>        <p class="searchable">楊素真-太歲燈：第六排 102</p>        <p class="searchable">林欣諭-太歲燈：第六排 103</p>        <p class="searchable">邱得瑋-太歲燈：第六排 105</p>
+        <p class="searchable">林姵伶-太歲燈：第六排 106</p>        <p class="searchable">邱宥心-太歲燈：第六排 107</p>        <p class="searchable">邱宇穆-太歲燈：第六排 108</p>        <p class="searchable">劉惟榛-太歲燈：第六排 109</p>
+        <p class="searchable">詹前富-太歲燈：第六排 110</p>        <p class="searchable">詹欣瑜-太歲燈：第六排 111</p>        <p class="searchable">楊桂香-太歲燈：第六排 112</p>        <p class="searchable">吉江稔-太歲燈：第六排 113</p>
+        <p class="searchable">陳禹燁-太歲燈：第六排 115</p>        <p class="searchable">潘雯甄-太歲燈：第六排 116</p>        <p class="searchable">嚴李有-太歲燈：第六排 117</p>        <p class="searchable">陳冠寧-太歲燈：第六排 118</p>
+        <p class="searchable">王家男-太歲燈：第六排 119</p>        <p class="searchable">陳彩雲-太歲燈：第六排 120</p>        <p class="searchable">王軍賀-太歲燈：第六排 121</p>        <p class="searchable">陳偉弘-太歲燈：第六排 122</p>
+        <p class="searchable">王郁捷-太歲燈：第六排 123</p>        <p class="searchable">陳洛妘-太歲燈：第六排 125</p>        <p class="searchable">楊冬冬-太歲燈：第六排 126</p>        <p class="searchable">林斌-太歲燈：第六排 127</p>
+        <p class="searchable">徐鳳儀-太歲燈：第六排 128</p>        <p class="searchable">徐萬里-太歲燈：第六排 129</p>        <p class="searchable">許靜-太歲燈：第六排 130</p>          <p class="searchable">王熤勛-太歲燈：第六排 131</p>
+        <p class="searchable">林王春美-太歲燈：第六排 132</p>      <p class="searchable">聶宥翔-太歲燈：第六排 133</p>        <p class="searchable">聶邱秀瓊-太歲燈：第六排 135</p>      <p class="searchable">聶學勇-太歲燈：第六排 136</p>
+        <p class="searchable">朱詩蕙-太歲燈：第六排 137</p>        <p class="searchable">游智凱-太歲燈：第六排 138</p>        <p class="searchable">王新發-太歲燈：第六排 139</p>        <p class="searchable">魏秀芳-太歲燈：第六排 150</p>
+        <p class="searchable">王宸昊-太歲燈：第六排 151</p>        <p class="searchable">王宸昇-太歲燈：第六排 152</p>        <p class="searchable">陳文王-太歲燈：第六排 153</p>        <p class="searchable">張二男-太歲燈：第六排 155</p>
+        <p class="searchable">黃秀珍-太歲燈：第六排 156</p>        <p class="searchable">江枝福-太歲燈：第六排 157</p>        <p class="searchable">吳月女-太歲燈：第六排 158</p>        <p class="searchable">張麗嬪-太歲燈：第六排 159</p>
+        <!-- 平安燈右1 -->
+        <p class="searchable">陳庭榆-平安燈：面朝媽祖，右邊，靠內，由左至右 第1盞</p>
+        <p class="searchable">吳浚維-平安燈：面朝媽祖，右邊，靠內，由左至右 第2盞</p>
+        <p class="searchable">吳曉玟-平安燈：面朝媽祖，右邊，靠內，由左至右 第3盞</p>
+        <p class="searchable">吳璁憲-平安燈：面朝媽祖，右邊，靠內，由左至右 第4盞</p>
+        <p class="searchable">游承翰-平安燈：面朝媽祖，右邊，靠內，由左至右 第5盞</p>
+        <p class="searchable">王銘達-平安燈：面朝媽祖，右邊，靠內，由左至右 第6盞</p>
+        <p class="searchable">李阿木-平安燈：面朝媽祖，右邊，靠內，由左至右 第7盞</p>
+        <p class="searchable">謝嘉銘-平安燈：面朝媽祖，右邊，靠內，由左至右 第8盞</p>
+        <p class="searchable">林坤德-平安燈：面朝媽祖，右邊，靠內，由左至右 第9盞</p>
+        <p class="searchable">楊羽筑-平安燈：面朝媽祖，右邊，靠內，由左至右 第10盞</p>
+        <p class="searchable">楊智偉-平安燈：面朝媽祖，右邊，靠內，由左至右 第11盞</p>
+        <p class="searchable">楊佾汵-平安燈：面朝媽祖，右邊，靠內，由左至右 第12盞</p>
+        <p class="searchable">楊智傑-平安燈：面朝媽祖，右邊，靠內，由左至右 第13盞</p>
+        <p class="searchable">陳美麗-平安燈：面朝媽祖，右邊，靠內，由左至右 第14盞</p>
+        <p class="searchable">張紘袀-平安燈：面朝媽祖，右邊，靠內，由左至右 第15盞</p>
+        <p class="searchable">趙彩勤-平安燈：面朝媽祖，右邊，靠內，由左至右 第16盞</p>
+        <p class="searchable">李梅枝-平安燈：面朝媽祖，右邊，靠內，由左至右 第17盞</p>
+        <p class="searchable">蔡和芳-平安燈：面朝媽祖，右邊，靠內，由左至右 第18盞</p>
+        <p class="searchable">吳勁志-平安燈：面朝媽祖，右邊，靠內，由左至右 第19盞</p>
+        <p class="searchable">賴映燁-平安燈：面朝媽祖，右邊，靠內，由左至右 第20盞</p>
+        <p class="searchable">林宗偉-平安燈：面朝媽祖，右邊，靠內，由左至右 第21盞</p>
+        <p class="searchable">林淑茹-平安燈：面朝媽祖，右邊，靠內，由左至右 第22盞</p>
+        <p class="searchable">溫祥泰-平安燈：面朝媽祖，右邊，靠內，由左至右 第23盞</p>
+        <!-- 平安燈右2 -->
+        <p class="searchable">陳葉-平安燈：面朝媽祖，右邊，靠外，由左至右 第1盞</p>
+        <p class="searchable">何銘檣-平安燈：面朝媽祖，右邊，靠外，由左至右 第2盞</p>
+        <p class="searchable">洪素嬌-平安燈：面朝媽祖，右邊，靠外，由左至右 第3盞</p>
+        <p class="searchable">陳多-平安燈：面朝媽祖，右邊，靠外，由左至右 第4盞</p>
+        <p class="searchable">賴靜怡-平安燈：面朝媽祖，右邊，靠外，由左至右 第5盞</p>
+        <p class="searchable">陳思妤-平安燈：面朝媽祖，右邊，靠外，由左至右 第6盞</p>
+        <p class="searchable">陳怡銘-平安燈：面朝媽祖，右邊，靠外，由左至右 第7盞</p>
+        <p class="searchable">吳斌仕-平安燈：面朝媽祖，右邊，靠外，由左至右 第8盞</p>
+        <p class="searchable">阮氏翠-平安燈：面朝媽祖，右邊，靠外，由左至右 第9盞</p>
+        <p class="searchable">洪敏純-平安燈：面朝媽祖，右邊，靠外，由左至右 第10盞</p>
+        <p class="searchable">洪國峰-平安燈：面朝媽祖，右邊，靠外，由左至右 第11盞</p>
+        <p class="searchable">張月花-平安燈：面朝媽祖，右邊，靠外，由左至右 第12盞</p>
+        <p class="searchable">江翊祺-平安燈：面朝媽祖，右邊，靠外，由左至右 第13盞</p>
+        <p class="searchable">陳美淳-平安燈：面朝媽祖，右邊，靠外，由左至右 第14盞</p>
+        <p class="searchable">余鴻慶-平安燈：面朝媽祖，右邊，靠外，由左至右 第15盞</p>
+        <p class="searchable">蔡佳妤-平安燈：面朝媽祖，右邊，靠外，由左至右 第16盞</p>
+        <p class="searchable">林祈霖-平安燈：面朝媽祖，右邊，靠外，由左至右 第17盞</p>
+        <p class="searchable">張泊文-平安燈：面朝媽祖，右邊，靠外，由左至右 第18盞</p>
+        <p class="searchable">劉乃豪-平安燈：面朝媽祖，右邊，靠外，由左至右 第19盞</p>
+        <p class="searchable">陳仲億-平安燈：面朝媽祖，右邊，靠外，由左至右 第20盞</p>
+        <p class="searchable">陳郁雯-平安燈：面朝媽祖，右邊，靠外，由左至右 第21盞</p>
+        <p class="searchable">陳瑞芳-平安燈：面朝媽祖，右邊，靠外，由左至右 第22盞</p>
+        <p class="searchable">陳瑞真-平安燈：面朝媽祖，右邊，靠外，由左至右 第23盞</p>
+        <!-- 平安燈左1 -->
+        <p class="searchable">林蓮純-平安燈：面朝媽祖，左邊，靠內，由右至左 第1盞</p>
+        <p class="searchable">王清發-平安燈：面朝媽祖，左邊，靠內，由右至左 第2盞</p>
+        <p class="searchable">吳心瑜-平安燈：面朝媽祖，左邊，靠內，由右至左 第3盞</p>
+        <p class="searchable">羅曉如-平安燈：面朝媽祖，左邊，靠內，由右至左 第4盞</p>
+        <p class="searchable">王迎安-平安燈：面朝媽祖，左邊，靠內，由右至左 第5盞</p>
+        <p class="searchable">陳苡菲-平安燈：面朝媽祖，左邊，靠內，由右至左 第6盞</p>
+        <p class="searchable">陳韋伸-平安燈：面朝媽祖，左邊，靠內，由右至左 第7盞</p>
+        <p class="searchable">吳昌益-平安燈：面朝媽祖，左邊，靠內，由右至左 第8盞</p>
+        <p class="searchable">吳宜芳-平安燈：面朝媽祖，左邊，靠內，由右至左 第9盞</p>
+        <p class="searchable">吳梁傑-平安燈：面朝媽祖，左邊，靠內，由右至左 第10盞</p>
+        <p class="searchable">林濬賢-平安燈：面朝媽祖，左邊，靠內，由右至左 第11盞</p>
+        <p class="searchable">陳建宏-平安燈：面朝媽祖，左邊，靠內，由右至左 第12盞</p>
+        <p class="searchable">林雪梨-平安燈：面朝媽祖，左邊，靠內，由右至左 第13盞</p>
+        <p class="searchable">吳銘煌-平安燈：面朝媽祖，左邊，靠內，由右至左 第14盞</p>
+        <p class="searchable">吳洋銘-平安燈：面朝媽祖，左邊，靠內，由右至左 第15盞</p>
+        <p class="searchable">陳雅琦-平安燈：面朝媽祖，左邊，靠內，由右至左 第16盞</p>
+        <p class="searchable">榮序玫-平安燈：面朝媽祖，左邊，靠內，由右至左 第17盞</p>
+        <p class="searchable">陳立瑋-平安燈：面朝媽祖，左邊，靠內，由右至左 第18盞</p>
+        <p class="searchable">葉燕樺-平安燈：面朝媽祖，左邊，靠內，由右至左 第19盞</p>
+        <p class="searchable">李新瑾-平安燈：面朝媽祖，左邊，靠內，由右至左 第20盞</p>
+        <p class="searchable">陳莉珍-平安燈：面朝媽祖，左邊，靠內，由右至左 第21盞</p>
+        <p class="searchable">張鑫致-平安燈：面朝媽祖，左邊，靠內，由右至左 第22盞</p>
+        <p class="searchable">鄭茗云-平安燈：面朝媽祖，左邊，靠內，由右至左 第23盞</p>
+        <!-- 平安燈左2 -->
+        <p class="searchable">莊俊達-平安燈：面朝媽祖，左邊，靠外，由右至左 第1盞</p>
+        <p class="searchable">陳宥羽-平安燈：面朝媽祖，左邊，靠外，由右至左 第2盞</p>
+        <p class="searchable">陳慧君-平安燈：面朝媽祖，左邊，靠外，由右至左 第3盞</p>
+        <p class="searchable">張麗葉-平安燈：面朝媽祖，左邊，靠外，由右至左 第4盞</p>
+        <p class="searchable">張承毅-平安燈：面朝媽祖，左邊，靠外，由右至左 第5盞</p>
+        <p class="searchable">吳正元-平安燈：面朝媽祖，左邊，靠外，由右至左 第6盞</p>
+        <p class="searchable">吳佳玲-平安燈：面朝媽祖，左邊，靠外，由右至左 第7盞</p>
+        <p class="searchable">吳炳耀-平安燈：面朝媽祖，左邊，靠外，由右至左 第8盞</p>
+        <p class="searchable">李佳玲-平安燈：面朝媽祖，左邊，靠外，由右至左 第9盞</p>
+        <p class="searchable">吳秀珍-平安燈：面朝媽祖，左邊，靠外，由右至左 第10盞</p>
+        <p class="searchable">李孟宗-平安燈：面朝媽祖，左邊，靠外，由右至左 第11盞</p>
+        <p class="searchable">王文芳-平安燈：面朝媽祖，左邊，靠外，由右至左 第12盞</p>
+        <p class="searchable">吳金柱-平安燈：面朝媽祖，左邊，靠外，由右至左 第13盞</p>
+        <p class="searchable">劉光維-平安燈：面朝媽祖，左邊，靠外，由右至左 第14盞</p>
+        <p class="searchable">沈民慈-平安燈：面朝媽祖，左邊，靠外，由右至左 第15盞</p>
+        <p class="searchable">林尚毅-平安燈：面朝媽祖，左邊，靠外，由右至左 第16盞</p>
+        <p class="searchable">陳偉弘-平安燈：面朝媽祖，左邊，靠外，由右至左 第17盞</p>
+        <p class="searchable">黃維綉-平安燈：面朝媽祖，左邊，靠外，由右至左 第18盞</p>
+        <p class="searchable">陳易承-平安燈：面朝媽祖，左邊，靠外，由右至左 第19盞</p>
+        <p class="searchable">王新發-平安燈：面朝媽祖，左邊，靠外，由右至左 第20盞</p>
+        <!-- 財利燈3 -->
+        <p class="searchable">譽恆機電工程有限公司-財利燈：面朝土地公，由內向外 第3排，由左至右 第1盞</p>
+        <p class="searchable">吳冠德-財利燈：面朝土地公，由內向外 第3排，由左至右 第2盞</p>
+        <p class="searchable">張竹盛-財利燈：面朝土地公，由內向外 第3排，由左至右 第3盞</p>
+        <p class="searchable">張元泰-財利燈：面朝土地公，由內向外 第3排，由左至右 第4盞</p>
+        <p class="searchable">張永澄-財利燈：面朝土地公，由內向外 第3排，由左至右 第5盞</p>
+        <p class="searchable">必路得股份有限公司 陳瑞榮-財利燈：面朝土地公，由內向外 第3排，由左至右 第6盞</p>
+        <p class="searchable">曾建智-財利燈：面朝土地公，由內向外 第3排，由左至右 第7盞</p>
+        <p class="searchable">巨銓工程有限公司 許閎棛-財利燈：面朝土地公，由內向外 第3排，由左至右 第8盞</p>
+        <p class="searchable">快捷開發有限公司 許全壹-財利燈：面朝土地公，由內向外 第3排，由左至右 第9盞</p>
+        <p class="searchable">永太起重工程有限公司 黃建烽-財利燈：面朝土地公，由內向外 第3排，由左至右 第10盞</p>
+        <p class="searchable">建懋國際有限公司 黃鴻達-財利燈：面朝土地公，由內向外 第3排，由左至右 第11盞</p>
+        <p class="searchable">百鑫國際貿易運輸有限公司 張涵瑜-財利燈：面朝土地公，由內向外 第3排，由左至右 第12盞</p>
+        <p class="searchable">全球通國際開發(股)公司 周采臻-財利燈：面朝土地公，由內向外 第3排，由左至右 第13盞</p>
+        <p class="searchable">胡珮琪-財利燈：面朝土地公，由內向外 第3排，由左至右 第14盞</p>
+        <p class="searchable">胡毓庭-財利燈：面朝土地公，由內向外 第3排，由左至右 第15盞</p>
+        <p class="searchable">侑成實業社 陳庭梧-財利燈：面朝土地公，由內向外 第3排，由左至右 第16盞</p>
+        <!-- 財利燈4 -->
+        <p class="searchable">楓岩室內設計公司 葉君馨-財利燈：面朝土地公，由內向外 第4排，由左至右 第1盞</p>
+        <p class="searchable">洪振豪-財利燈：面朝土地公，由內向外 第4排，由左至右 第2盞</p>
+        <p class="searchable">陳雅鈴-財利燈：面朝土地公，由內向外 第4排，由左至右 第3盞</p>
+        <p class="searchable">豪雅景觀園藝-財利燈：面朝土地公，由內向外 第4排，由左至右 第4盞</p>
+        <p class="searchable">陳美麗-財利燈：面朝土地公，由內向外 第4排，由左至右 第5盞</p>
+        <p class="searchable">潘幸如-財利燈：面朝土地公，由內向外 第4排，由左至右 第6盞</p>
+        <p class="searchable">酆鎧騰實業有限公司-財利燈：面朝土地公，由內向外 第4排，由左至右 第7盞</p>
+        <p class="searchable">酆鎧騰實業 羅傅裕-財利燈：面朝土地公，由內向外 第4排，由左至右 第8盞</p>
+        <p class="searchable">楊春卿-財利燈：面朝土地公，由內向外 第4排，由左至右 第9盞</p>
+        <p class="searchable">何炎泉-財利燈：面朝土地公，由內向外 第4排，由左至右 第10盞</p>
+        <p class="searchable">鈞洋消防工程(有)公司/翔畇消防科技-財利燈：面朝土地公，由內向外 第4排，由左至右 第11盞</p>
+        <p class="searchable">楊智傑-財利燈：面朝土地公，由內向外 第4排，由左至右 第12盞</p>
+        <p class="searchable">瀚欣工作室 陳欣儀-財利燈：面朝土地公，由內向外 第4排，由左至右 第13盞</p>
+        <p class="searchable">力倢科技有限公司 羅雅馨-財利燈：面朝土地公，由內向外 第4排，由左至右 第14盞</p>
+        <p class="searchable">林坤德-財利燈：面朝土地公，由內向外 第4排，由左至右 第15盞</p>
+        <p class="searchable">璟翔精緻油漆工程行-財利燈：面朝土地公，由內向外 第4排，由左至右 第16盞</p>
+        <!-- 財利燈5 -->
+        <p class="searchable">洪綉怜-財利燈：面朝土地公，由內向外 第5排，由左至右 第1盞</p>
+        <p class="searchable">洪志明-財利燈：面朝土地公，由內向外 第5排，由左至右 第2盞</p>
+        <p class="searchable">王仁杰-財利燈：面朝土地公，由內向外 第5排，由左至右 第3盞</p>
+        <p class="searchable">郭惠瑜-財利燈：面朝土地公，由內向外 第5排，由左至右 第4盞</p>
+        <p class="searchable">蔡惠霖-財利燈：面朝土地公，由內向外 第5排，由左至右 第5盞</p>
+        <p class="searchable">鐘子能-財利燈：面朝土地公，由內向外 第5排，由左至右 第6盞</p>
+        <p class="searchable">高禎晤-財利燈：面朝土地公，由內向外 第5排，由左至右 第7盞</p>
+        <p class="searchable">謝淑婷-財利燈：面朝土地公，由內向外 第5排，由左至右 第8盞</p>
+        <p class="searchable">章景勛-財利燈：面朝土地公，由內向外 第5排，由左至右 第9盞</p>
+        <p class="searchable">章元豪-財利燈：面朝土地公，由內向外 第5排，由左至右 第10盞</p>
+        <p class="searchable">李和縈-財利燈：面朝土地公，由內向外 第5排，由左至右 第11盞</p>
+        <p class="searchable">雙誼科技有限公司-財利燈：面朝土地公，由內向外 第5排，由左至右 第12盞</p>
+        <p class="searchable">劉順進-財利燈：面朝土地公，由內向外 第5排，由左至右 第13盞</p>
+        <p class="searchable">賴珍芬-財利燈：面朝土地公，由內向外 第5排，由左至右 第14盞</p>
+        <p class="searchable">賴淑敏-財利燈：面朝土地公，由內向外 第5排，由左至右 第15盞</p>
+        <p class="searchable">賴淑玲-財利燈：面朝土地公，由內向外 第5排，由左至右 第16盞</p>
+        <!-- 財利燈6 -->
+        <p class="searchable">吳國盛-財利燈：面朝土地公，由內向外 第6排，由左至右 第1盞</p>
+        <p class="searchable">禧采企業社 張秋玉-財利燈：面朝土地公，由內向外 第6排，由左至右 第2盞</p>
+        <p class="searchable">慶祐 張秋玉-財利燈：面朝土地公，由內向外 第6排，由左至右 第3盞</p>
+        <p class="searchable">永智實業有限公司-財利燈：面朝土地公，由內向外 第6排，由左至右 第4盞</p>
+        <p class="searchable">何雯婷-財利燈：面朝土地公，由內向外 第6排，由左至右 第5盞</p>
+        <p class="searchable">古亦膳地政士事務所-財利燈：面朝土地公，由內向外 第6排，由左至右 第6盞</p>
+        <p class="searchable">謝嘉銘-財利燈：面朝土地公，由內向外 第6排，由左至右 第7盞</p>
+        <p class="searchable">吳鴻宇-財利燈：面朝土地公，由內向外 第6排，由左至右 第8盞</p>
+        <p class="searchable">吳裕豐-財利燈：面朝土地公，由內向外 第6排，由左至右 第9盞</p>
+        <p class="searchable">吳鳳如-財利燈：面朝土地公，由內向外 第6排，由左至右 第10盞</p>
+        <p class="searchable">焦國貴-財利燈：面朝土地公，由內向外 第6排，由左至右 第11盞</p>
+        <p class="searchable">蘇文功-財利燈：面朝土地公，由內向外 第6排，由左至右 第12盞</p>
+        <p class="searchable">武玟蕙-財利燈：面朝土地公，由內向外 第6排，由左至右 第13盞</p>
+        <p class="searchable">陳俊旭-財利燈：面朝土地公，由內向外 第6排，由左至右 第14盞</p>
+        <p class="searchable">陳慧蓉-財利燈：面朝土地公，由內向外 第6排，由左至右 第15盞</p>
+        <p class="searchable">聖穎紙業有限公司 廖惠臣-財利燈：面朝土地公，由內向外 第6排，由左至右 第16盞</p>
+        <!-- 財利燈7 -->
+        <p class="searchable">周盈村-財利燈：面朝土地公，由內向外 第7排，由左至右 第1盞</p>
+        <p class="searchable">劉至祥-財利燈：面朝土地公，由內向外 第7排，由左至右 第2盞</p>
+        <p class="searchable">康依婷-財利燈：面朝土地公，由內向外 第7排，由左至右 第3盞</p>
+        <p class="searchable">陳金玉-財利燈：面朝土地公，由內向外 第7排，由左至右 第4盞</p>
+        <p class="searchable">陳誌偉-財利燈：面朝土地公，由內向外 第7排，由左至右 第5盞</p>
+        <p class="searchable">陳鵬如-財利燈：面朝土地公，由內向外 第7排，由左至右 第6盞</p>
+        <p class="searchable">唐佳君-財利燈：面朝土地公，由內向外 第7排，由左至右 第7盞</p>
+        <p class="searchable">陳瑋皓-財利燈：面朝土地公，由內向外 第7排，由左至右 第8盞</p>
+        <p class="searchable">黃凱鈿-財利燈：面朝土地公，由內向外 第7排，由左至右 第9盞</p>
+        <p class="searchable">楊淑均-財利燈：面朝土地公，由內向外 第7排，由左至右 第10盞</p>
+        <p class="searchable">高志維-財利燈：面朝土地公，由內向外 第7排，由左至右 第11盞</p>
+        <p class="searchable">吳憶如-財利燈：面朝土地公，由內向外 第7排，由左至右 第12盞</p>
+        <p class="searchable">許信紀-財利燈：面朝土地公，由內向外 第7排，由左至右 第13盞</p>
+        <p class="searchable">家豐富工程有限公司-財利燈：面朝土地公，由內向外 第7排，由左至右 第14盞</p>
+        <p class="searchable">陳靜瑜-財利燈：面朝土地公，由內向外 第7排，由左至右 第15盞</p>
+        <p class="searchable">陳泰安-財利燈：面朝土地公，由內向外 第7排，由左至右 第16盞</p>
+        <!-- 財利燈8 -->
+        <p class="searchable">侑成系統家居 洪淑菁-財利燈：面朝土地公，由內向外 第8排，由左至右 第1盞</p>
+        <p class="searchable">陳重安-財利燈：面朝土地公，由內向外 第8排，由左至右 第2盞</p>
+        <p class="searchable">黃以學-財利燈：面朝土地公，由內向外 第8排，由左至右 第3盞</p>
+        <p class="searchable">李雅萍-財利燈：面朝土地公，由內向外 第8排，由左至右 第4盞</p>
+        <p class="searchable">林易麒-財利燈：面朝土地公，由內向外 第8排，由左至右 第5盞</p>
+        <p class="searchable">媛繡美學-財利燈：面朝土地公，由內向外 第8排，由左至右 第6盞</p>
+        <p class="searchable">林宏哲-財利燈：面朝土地公，由內向外 第8排，由左至右 第7盞</p>
+        <p class="searchable">游舒涵-財利燈：面朝土地公，由內向外 第8排，由左至右 第8盞</p>
+        <p class="searchable">沙鹿龍井梧棲清水老酒收購 邱偉豪-財利燈：面朝土地公，由內向外 第8排，由左至右 第9盞</p>
+        <p class="searchable">盧碧良-財利燈：面朝土地公，由內向外 第8排，由左至右 第10盞</p>
+        <p class="searchable">陳杰晧-財利燈：面朝土地公，由內向外 第8排，由左至右 第11盞</p>
+        <p class="searchable">林文忠-財利燈：面朝土地公，由內向外 第8排，由左至右 第12盞</p>
+        <p class="searchable">林姝言-財利燈：面朝土地公，由內向外 第8排，由左至右 第13盞</p>
+        <p class="searchable">歐丁室內裝修有限公司-財利燈：面朝土地公，由內向外 第8排，由左至右 第14盞</p>
+        <p class="searchable">邱顯癸-財利燈：面朝土地公，由內向外 第8排，由左至右 第15盞</p>
+        <p class="searchable">陳嘉仁-財利燈：面朝土地公，由內向外 第8排，由左至右 第16盞</p>
+        <!-- 財利燈9 -->
+        <p class="searchable">夏啟倫-財利燈：面朝土地公，由內向外 第9排，由左至右 第1盞</p>
+        <p class="searchable">陳怡伶-財利燈：面朝土地公，由內向外 第9排，由左至右 第2盞</p>
+        <p class="searchable">何宏偉-財利燈：面朝土地公，由內向外 第9排，由左至右 第3盞</p>
+        <p class="searchable">李美蓁-財利燈：面朝土地公，由內向外 第9排，由左至右 第4盞</p>
+        <p class="searchable">李姿璇-財利燈：面朝土地公，由內向外 第9排，由左至右 第5盞</p>
+        <p class="searchable">楊淵中-財利燈：面朝土地公，由內向外 第9排，由左至右 第6盞</p>
+        <p class="searchable">永鈺企業社 陳嘉浤-財利燈：面朝土地公，由內向外 第9排，由左至右 第7盞</p>
+        <p class="searchable">吳翊慈-財利燈：面朝土地公，由內向外 第9排，由左至右 第8盞</p>
+        <p class="searchable">林尚泓-財利燈：面朝土地公，由內向外 第9排，由左至右 第9盞</p>
+        <p class="searchable">大蘋果環保能源有限公司 吳燕林-財利燈：面朝土地公，由內向外 第9排，由左至右 第10盞</p>
+        <p class="searchable">謝旺財-財利燈：面朝土地公，由內向外 第9排，由左至右 第11盞</p>
+        <p class="searchable">謝心莉-財利燈：面朝土地公，由內向外 第9排，由左至右 第12盞</p>
+        <p class="searchable">謝景旭-財利燈：面朝土地公，由內向外 第9排，由左至右 第13盞</p>
+        <p class="searchable">房心瑀-財利燈：面朝土地公，由內向外 第9排，由左至右 第14盞</p>
+        <p class="searchable">李亮承-財利燈：面朝土地公，由內向外 第9排，由左至右 第15盞</p>
+        <p class="searchable">捷新起重工程行 林志旭-財利燈：面朝土地公，由內向外 第9排，由左至右 第16盞</p>
+        <!-- 財利燈10 -->
+        <p class="searchable">白世照-財利燈：面朝土地公，由內向外 第10排，由左至右 第1盞</p>
+        <p class="searchable">李新瑾-財利燈：面朝土地公，由內向外 第10排，由左至右 第2盞</p>
+        <p class="searchable">張晉誠-財利燈：面朝土地公，由內向外 第10排，由左至右 第3盞</p>
+        <p class="searchable">張日霖-財利燈：面朝土地公，由內向外 第10排，由左至右 第4盞</p>
+        <p class="searchable">吳家榮-財利燈：面朝土地公，由內向外 第10排，由左至右 第5盞</p>
+        <p class="searchable">吳政諺-財利燈：面朝土地公，由內向外 第10排，由左至右 第6盞</p>
+        <p class="searchable">林柏杰-財利燈：面朝土地公，由內向外 第10排，由左至右 第7盞</p>
+        <p class="searchable">陳銘山-財利燈：面朝土地公，由內向外 第10排，由左至右 第8盞</p>
+        <p class="searchable">邱竣禾-財利燈：面朝土地公，由內向外 第10排，由左至右 第9盞</p>
+        <p class="searchable">林容仱-財利燈：面朝土地公，由內向外 第10排，由左至右 第10盞</p>
+        <p class="searchable">吳晁杰-財利燈：面朝土地公，由內向外 第10排，由左至右 第11盞</p>
+        <p class="searchable">吳昌翰-財利燈：面朝土地公，由內向外 第10排，由左至右 第12盞</p>
+        <p class="searchable">鄭力瑋-財利燈：面朝土地公，由內向外 第10排，由左至右 第13盞</p>
+        <p class="searchable">洪翠鴻-財利燈：面朝土地公，由內向外 第10排，由左至右 第14盞</p>
+        <p class="searchable">羅捷穎-財利燈：面朝土地公，由內向外 第10排，由左至右 第15盞</p>
+        <p class="searchable">林原廣-財利燈：面朝土地公，由內向外 第10排，由左至右 第16盞</p>
+        <!-- 財利燈11 -->
+        <p class="searchable">吳國彬-財利燈：面朝土地公，由內向外 第11排，由左至右 第1盞</p>
+        <p class="searchable">順意全家便利商店 童淑萍-財利燈：面朝土地公，由內向外 第11排，由左至右 第2盞</p>
+        <p class="searchable">蔡宇鵬-財利燈：面朝土地公，由內向外 第11排，由左至右 第3盞</p>
+        <p class="searchable">興樺紙器有限公司-財利燈：面朝土地公，由內向外 第11排，由左至右 第4盞</p>
+        <p class="searchable">勤洋起重工程行 吳銘智-財利燈：面朝土地公，由內向外 第11排，由左至右 第5盞</p>
+        <p class="searchable">吳偉碩-財利燈：面朝土地公，由內向外 第11排，由左至右 第6盞</p>
+        <p class="searchable">呂文佐-財利燈：面朝土地公，由內向外 第11排，由左至右 第7盞</p>
+        <p class="searchable">羅曉如-財利燈：面朝土地公，由內向外 第11排，由左至右 第8盞</p>
+        <p class="searchable">洪思怡-財利燈：面朝土地公，由內向外 第11排，由左至右 第9盞</p>
+        <p class="searchable">冬妍濬-財利燈：面朝土地公，由內向外 第11排，由左至右 第10盞</p>
+        <p class="searchable">兆義新實業有限公司-財利燈：面朝土地公，由內向外 第11排，由左至右 第11盞</p>
+        <p class="searchable">林榮聰-財利燈：面朝土地公，由內向外 第11排，由左至右 第12盞</p>
+        <p class="searchable">梁美惠-財利燈：面朝土地公，由內向外 第11排，由左至右 第13盞</p>
+        <p class="searchable">王彥翔-財利燈：面朝土地公，由內向外 第11排，由左至右 第14盞</p>
+        <p class="searchable">王彥凱-財利燈：面朝土地公，由內向外 第11排，由左至右 第15盞</p>
+        <p class="searchable">吳心瑜-財利燈：面朝土地公，由內向外 第11排，由左至右 第16盞</p>
+        <!-- 財利燈12 -->
+        <p class="searchable">吳孟玉-財利燈：面朝土地公，由內向外 第12排，由左至右 第1盞</p>
+        <p class="searchable">嘉品駿實業有限公司-財利燈：面朝土地公，由內向外 第12排，由左至右 第2盞</p>
+        <p class="searchable">童麗靜-財利燈：面朝土地公，由內向外 第12排，由左至右 第3盞</p>
+        <p class="searchable">時尚咖啡 童麗欣-財利燈：面朝土地公，由內向外 第12排，由左至右 第4盞</p>
+        <p class="searchable">鹿餃-財利燈：面朝土地公，由內向外 第12排，由左至右 第5盞</p>
+        <p class="searchable">蕭靜彤-財利燈：面朝土地公，由內向外 第12排，由左至右 第6盞</p>
+        <p class="searchable">鴻毅織帶工廠-財利燈：面朝土地公，由內向外 第12排，由左至右 第7盞</p>
+        <p class="searchable">吳昭嬋-財利燈：面朝土地公，由內向外 第12排，由左至右 第8盞</p>
+        <p class="searchable">建菘滴雞精-財利燈：面朝土地公，由內向外 第12排，由左至右 第9盞</p>
+        <p class="searchable">蔡泳春-財利燈：面朝土地公，由內向外 第12排，由左至右 第10盞</p>
+        <p class="searchable">顏清吉-財利燈：面朝土地公，由內向外 第12排，由左至右 第11盞</p>
+        <p class="searchable">顏光協-財利燈：面朝土地公，由內向外 第12排，由左至右 第12盞</p>
+        <p class="searchable">顏志勝-財利燈：面朝土地公，由內向外 第12排，由左至右 第13盞</p>
+        <p class="searchable">劉財壽-財利燈：面朝土地公，由內向外 第12排，由左至右 第14盞</p>
+        <p class="searchable">王淑薇-財利燈：面朝土地公，由內向外 第12排，由左至右 第15盞</p>
+        <p class="searchable">高銘成-財利燈：面朝土地公，由內向外 第12排，由左至右 第16盞</p>
+        <!-- 財利燈13 -->
+        <p class="searchable">高銘葦-財利燈：面朝土地公，由內向外 第13排，由左至右 第1盞</p>
+        <p class="searchable">名力精密鋼模股份有限公司-財利燈：面朝土地公，由內向外 第13排，由左至右 第2盞</p>
+        <p class="searchable">李登豐-財利燈：面朝土地公，由內向外 第13排，由左至右 第3盞</p>
+        <p class="searchable">李忠騰-財利燈：面朝土地公，由內向外 第13排，由左至右 第4盞</p>
+        <p class="searchable">陳美芬-財利燈：面朝土地公，由內向外 第13排，由左至右 第5盞</p>
+        <p class="searchable">顏玉清-財利燈：面朝土地公，由內向外 第13排，由左至右 第6盞</p>
+        <p class="searchable">陳文森-財利燈：面朝土地公，由內向外 第13排，由左至右 第7盞</p>
+        <p class="searchable">吳哲緯-財利燈：面朝土地公，由內向外 第13排，由左至右 第8盞</p>
+        <p class="searchable">盛鈺工程 吳瀚森-財利燈：面朝土地公，由內向外 第13排，由左至右 第9盞</p>
+        <p class="searchable">Amy美容坊-財利燈：面朝土地公，由內向外 第13排，由左至右 第10盞</p>
+        <p class="searchable">顏陪勲紋繡工作坊-財利燈：面朝土地公，由內向外 第13排，由左至右 第11盞</p>
+        <p class="searchable">陳大豐-財利燈：面朝土地公，由內向外 第13排，由左至右 第12盞</p>
+        <p class="searchable">鄭瑞惠-財利燈：面朝土地公，由內向外 第13排，由左至右 第13盞</p>
+        <p class="searchable">陳紓綺-財利燈：面朝土地公，由內向外 第13排，由左至右 第14盞</p>
+        <p class="searchable">顏亮-財利燈：面朝土地公，由內向外 第13排，由左至右 第15盞</p>
+        <p class="searchable">饒鈺渝-財利燈：面朝土地公，由內向外 第13排，由左至右 第16盞</p>
+        <!-- 財利燈14 -->
+        <p class="searchable">李佩如-財利燈：面朝土地公，由內向外 第14排，由左至右 第1盞</p>
+        <p class="searchable">張秀鳳-財利燈：面朝土地公，由內向外 第14排，由左至右 第2盞</p>
+        <p class="searchable">林俊雄-財利燈：面朝土地公，由內向外 第14排，由左至右 第3盞</p>
+        <p class="searchable">林巧馨-財利燈：面朝土地公，由內向外 第14排，由左至右 第4盞</p>
+        <p class="searchable">林奕盛-財利燈：面朝土地公，由內向外 第14排，由左至右 第5盞</p>
+        <p class="searchable">丁雅君-財利燈：面朝土地公，由內向外 第14排，由左至右 第6盞</p>
+        <p class="searchable">樂齡照顧服務合作社-財利燈：面朝土地公，由內向外 第14排，由左至右 第7盞</p>
+        <p class="searchable">謝清廉-財利燈：面朝土地公，由內向外 第14排，由左至右 第8盞</p>
+        <p class="searchable">葉美江-財利燈：面朝土地公，由內向外 第14排，由左至右 第9盞</p>
+        <p class="searchable">武鈺倫-財利燈：面朝土地公，由內向外 第14排，由左至右 第10盞</p>
+        <p class="searchable">李志傑-財利燈：面朝土地公，由內向外 第14排，由左至右 第11盞</p>
+        <p class="searchable">劉坤明-財利燈：面朝土地公，由內向外 第14排，由左至右 第12盞</p>
+        <p class="searchable">李英龍-財利燈：面朝土地公，由內向外 第14排，由左至右 第13盞</p>
+        <p class="searchable">黃維綉-財利燈：面朝土地公，由內向外 第14排，由左至右 第14盞</p>
+        <p class="searchable">兆昇廣告行銷有限公司-財利燈：面朝土地公，由內向外 第14排，由左至右 第15盞</p>
+        <p class="searchable">劉雅文-財利燈：面朝土地公，由內向外 第14排，由左至右 第16盞</p>
+        <!-- 財利燈15 -->
+        <p class="searchable">黃意雯-財利燈：面朝土地公，由內向外 第15排，由左至右 第1盞</p>
+        <p class="searchable">順晟科技-財利燈：面朝土地公，由內向外 第15排，由左至右 第2盞</p>
+        <p class="searchable">誠億空調-財利燈：面朝土地公，由內向外 第15排，由左至右 第3盞</p>
+        <!-- 斗燈右1 -->
+        <p class="searchable">斗燈：吳星佑、吳籐、吳林綉悅、廖凡羢、吳春亨、吳冠儀、吳佳靜、吳勁志、吳冠德，面朝斗燈 右邊，由上至下 第1排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：張竹盛、張元泰、林詠媗、張紘袀、趙彩勤、張永澄，面朝斗燈 右邊，由上至下 第1排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：陳瑞榮、王慶梅、陳芷翎、陳芷萱，面朝斗燈 右邊，由上至下 第1排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：李承叡、林圍、李紘宇、李柏均、張綺恩，面朝斗燈 右邊，由上至下 第1排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：陳素梅、吳裕豐、吳婉如、吳鳳如、吳芛萱、林旭辰、潘采緹、焦國貴、焦梓瑋、焦詠聖、鄧凱翔，面朝斗燈 右邊，由上至下 第1排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：曾建智、蔡姍珊、曾馨瑤、曾宥綸，面朝斗燈 右邊，由上至下 第1排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：蔡富博、葉君馨、蔡柏漢，面朝斗燈 右邊，由上至下 第1排，由左至右 第7盞</p>
+        <!-- 斗燈右2 -->
+        <p class="searchable">斗燈：易志林、巫惠美、易庭安、易庭竹，面朝斗燈 右邊，由上至下 第2排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：吳松濂、黃詩育、吳家宏、吳品叡，面朝斗燈 右邊，由上至下 第2排，由左至右 2第盞</p>
+        <p class="searchable">斗燈：林方翔、陳筱妮，面朝斗燈 右邊，由上至下 第2排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：卓沂嫺、楊壬豐、陳智垣、陳禹安、蔡羽函，面朝斗燈 右邊，由上至下 第2排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：郭陳盆、郭育誠、李沛穎、郭恩碩、郭紘睿、廖俊順、郭昭伶，面朝斗燈 右邊，由上至下 第2排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：陳瑞庭、何素滿、陳立偉、陳惠君、陳品宏，面朝斗燈 右邊，由上至下 第2排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：蔡宗沛、陳惠珊、蔡易杋、蔡旻真，面朝斗燈 右邊，由上至下 第2排，由左至右 第7盞</p>
+        <p class="searchable">斗燈：李淑娟、卓楷翔、卓志偉、卓沐妘、卓佩儀、卓家茗、林寬昀，面朝斗燈 右邊，由上至下 第2排，由左至右 第8盞</p>
+        <!-- 斗燈右3 -->
+        <p class="searchable">斗燈：章景勛、章宗立、章宗任、章宗佑、章元豪、吳雅惠、謝詠婕，面朝斗燈 右邊，由上至下 第3排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：吳銘章、吳峰旭、吳權展、吳思瑤、紀水雲，面朝斗燈 右邊，由上至下 第3排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：馬程冠、吳鳳媛、馬碩旋、馬郡苹，面朝斗燈 右邊，由上至下 第3排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：吳邵寶珍、吳國盛、吳剛毅、吳之詠、吳梅雀、吳鳳榆、朱怡璇，面朝斗燈 右邊，由上至下 第3排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：黃建銘、黃士津、黃彥彬、黃家彤，面朝斗燈 右邊，由上至下 第3排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：吳鴻宇、林菁菁、吳暄霏、吳雨璇，面朝斗燈 右邊，由上至下 第3排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：何銘修、葉海芳、何芳鋆、何芳靚、陳桂香、何名凱，面朝斗燈 右邊，由上至下 第3排，由左至右 第7盞</p>
+        <!-- 斗燈右4 -->
+        <p class="searchable">斗燈：蘇文功、張瑀倢、蘇恩霆、蘇柔羽，面朝斗燈 右邊，由上至下 第4排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：夏余秀英、夏啓倫、夏啟原、夏建德、陳怡伶、夏駿林、夏冠瑋、劉穎蓁、夏衣瑾、夏于程，面朝斗燈 右邊，由上至下 第4排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：陳鴻陞、陳金玉、陳誌偉、陳誼蓁，面朝斗燈 右邊，由上至下 第4排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：張語晞、蔡尚宏、蔡苡柔、蔡子宥、陳冠霏，面朝斗燈 右邊，由上至下 第4排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：曾貴群、吳美容、曾倍宏、曾婉婷、吳祥維，面朝斗燈 右邊，由上至下 第4排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：李慶祥、李阿木、葉淑勤、李世傑、李慧芬、李慶豐，面朝斗燈 右邊，由上至下 第4排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：孫辟嶼、黃麗君、孫高傑，面朝斗燈 右邊，由上至下 第4排，由左至右 第7盞</p>
+        <p class="searchable">斗燈：柯凰麗、陳宥辰、沈承翰、陳芸禎、陳郁蓉，面朝斗燈 右邊，由上至下 第4排，由左至右 第8盞</p>
+        <!-- 斗燈右5 -->
+        <p class="searchable">斗燈：王銘達、陳迎蓁、王士凱、陳曉慈、王浩宇、王瀚宇、王良暉、陳懿欣、蔣典曉、王珍藜、蔣品姸、蔣予恩、陳思怡、徐郁文、徐小雲、徐郁婷，面朝斗燈 右邊，由上至下 第5排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：郭敏森、吳宜珊、郭信佑、郭東燊、張玉妹、郭志民、郭梓芸、鄭淑媚，面朝斗燈 右邊，由上至下 第5排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：陳錦田、陳重安，面朝斗燈 右邊，由上至下 第5排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：蔡旻錫、單 媛、蔡維哲、蔡宜曈，面朝斗燈 右邊，由上至下 第5排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：游承翰、游舒婷、魏瓊珠、張彩暄、游沅樾、游沄澍、林宏哲，面朝斗燈 右邊，由上至下 第5排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：吳冠慶、吳籐、吳林綉悅、陳秀美、吳璁憲、徐雅珉、吳曉玟、吳松鴻、吳明真、吳浚維、吳芳瑩，面朝斗燈 右邊，由上至下 第5排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：林蕊、黃瑞發、林琼雅、黃軍侑、黃瑞泉、黃安妤、黃柏翔、黃柏宇，面朝斗燈 右邊，由上至下 第5排，由左至右 第7盞</p>
+        <!-- 斗燈右6 -->
+        <p class="searchable">斗燈：吳進火、陳緞、吳國靖、葉雅琪、吳國綸、吳宜珊、黃沛宸，面朝斗燈 右邊，由上至下 第6排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：林文忠、林姝言、林茂杰、林秉豪、林品妤、林曦蕾、林秉曜，面朝斗燈 右邊，由上至下 第6排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：邱顯癸、陳秀娥、邱炫宗、邱郁誠、何芷儀、邱柄叡，面朝斗燈 右邊，由上至下 第6排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：吳國、林秀月、吳孟玉、吳得逢、吳建欣、蔡秀如、王怡婷、吳定原、吳瑩萱、吳喬諭，面朝斗燈 右邊，由上至下 第6排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：陳嘉浤、賴琴瑜、陳彥翰、陳彥樺、陳巧紜，面朝斗燈 右邊，由上至下 第6排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：吳棋實、吳翊慈，面朝斗燈 右邊，由上至下 第6排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：林水松、吳麗香、林尚泓、林姍諭、王秀雲，面朝斗燈 右邊，由上至下 第6排，由左至右 第7盞</p>
+        <p class="searchable">斗燈：林詩耿、吳萬草、王世賢、林翊軒，面朝斗燈 右邊，由上至下 第6排，由左至右 第8盞</p>
+        <!-- 斗燈右7 -->
+        <p class="searchable">斗燈：謝嘉銘、張琼美、謝芯楀、謝芯妮，面朝斗燈 右邊，由上至下 第7排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：吳勝五、董心瑩、吳家榮、魏嘉鈴、吳忻儒、吳政諺、吳之云、吳秉羲、吳珮妮、葉宣晨，面朝斗燈 右邊，由上至下 第7排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：楊承恩、陳美岑、楊雯婷、楊易霖、楊絢茜、巫坤達，面朝斗燈 右邊，由上至下 第7排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：蔡宜芳，面朝斗燈 右邊，由上至下 第7排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：林柏杰、黃婕瑜、林正詠、林正諺、林鏢榕、楊美玉，面朝斗燈 右邊，由上至下 第7排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：莊坤霖、黃意雯、莊鈴惟、莊富鈞，面朝斗燈 右邊，由上至下 第7排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：莊仁章、陳麗蓉、莊惠縈，面朝斗燈 右邊，由上至下 第7排，由左至右 第7盞</p>
+        <!-- 斗燈右8 -->
+        <p class="searchable">斗燈：陳銘山、陳啟忠、陳稜靜、陳澄源、陳潘紅垂、陳稜定，面朝斗燈 右邊，由上至下 第8排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：莊學宗、蔡淑雅、莊凡萱、莊凱涪，面朝斗燈 右邊，由上至下 第8排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：洪增應、李淑芬、洪育民、洪昭乾、張靄婷，面朝斗燈 右邊，由上至下 第8排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：童丁卯、陳素密、童建彰、童美雯、童少龍、童玫菁、黃思瑀、童泊森、童奕森、曲晨涵，面朝斗燈 右邊，由上至下 第8排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：劉育志、吳麗君、劉芷含、劉芷吟，面朝斗燈 右邊，由上至下 第8排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：王家煙、王玉瑋、陳欣妤，面朝斗燈 右邊，由上至下 第8排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：童志量、游月娥、童玟綾、范梅香、童彥松、童政益、曾瓊樺、吳美麗、童秋元、童鴻偉、童玟雅、童安全，面朝斗燈 右邊，由上至下 第8排，由左至右 第7盞</p>
+        <p class="searchable">斗燈：洪輝龍、張玉蘭、陳宜芝、洪啓智、洪雅萍、洪泓池、洪雅慧，面朝斗燈 右邊，由上至下 第8排，由左至右 第8盞</p>
+        <!-- 斗燈右9 -->
+        <p class="searchable">斗燈：林濬賢、王翊驊、林檬，面朝斗燈 右邊，由上至下 第9排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：楊金煜、楊詠傑、楊文賢、李秀美、楊雅惠、趙如玉、王姮蓁、王芃諭，面朝斗燈 右邊，由上至下 第9排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：吳國彬、吳朝濃、吳文獻、甘嘉婷、吳雅婷、吳婕寧、吳沂恩、賴惠容，面朝斗燈 右邊，由上至下 第9排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：蕭清義、阮雲喬、蕭靖媛、蕭祺勳，面朝斗燈 右邊，由上至下 第9排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：林德榮、林吳月桃、林奉淵、林睿宇、林若淳、林若涵、徐衣黎、林晴汝，面朝斗燈 右邊，由上至下 第9排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：張振豐、張晨洋、張紘唯、張展裴、吳月女、吳旻珊，面朝斗燈 右邊，由上至下 第9排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：黃嘉健、趙怡婷、黃彥凱，面朝斗燈 右邊，由上至下 第9排，由左至右 第7盞</p>
+        <!-- 斗燈右10 -->
+        <p class="searchable">斗燈：張秀英、吳翊婷、吳永隆、吳芷瑩、吳愉珮、黃美綺，面朝斗燈 右邊，由上至下 第10排，由左至右 第1盞</p>
+        <p class="searchable">斗燈：莊鋌溦、張晉煌、張博皓、張雅琴、陳祐安、陳品彤，面朝斗燈 右邊，由上至下 第10排，由左至右 第2盞</p>
+        <p class="searchable">斗燈：施嘉裕、何依珊，面朝斗燈 右邊，由上至下 第10排，由左至右 第3盞</p>
+        <p class="searchable">斗燈：陳昱成、陳柏豪，面朝斗燈 右邊，由上至下 第10排，由左至右 第4盞</p>
+        <p class="searchable">斗燈：林定巡、吳清文、林秀昭、吳宜璇、吳靖纂、張月珠、吳靖騫、吳靖涵、吳沛璇，面朝斗燈 右邊，由上至下 第10排，由左至右 第5盞</p>
+        <p class="searchable">斗燈：羅輝雄、羅元德、羅元庸、羅巧芸、李麗雪，面朝斗燈 右邊，由上至下 第10排，由左至右 第6盞</p>
+        <p class="searchable">斗燈：呂文佐、羅曉如、呂育彰、呂芳儀，面朝斗燈 右邊，由上至下 第10排，由左至右 第7盞</p>
+        <p class="searchable">斗燈：洪思怡、莊玉燕、冬妍濬、洪沛妤、莊洪協、陳議偉、莊芮蓁、莊依欣、王郁茹，面朝斗燈 右邊，由上至下 第10排，由左至右 第8盞</p>
+        <!-- 斗燈左1 -->
+        <p class="searchable">斗燈：林榮聰、劉錦屏、林柏成、林雅琳、李芊葦、林昱妡、林定穎、林雅琪、李泓毅、李沛晴，面朝斗燈 左邊，由上至下 第1排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：王筱龍、梁美惠、王彥翔、王彥凱、王彥琳，面朝斗燈 左邊，由上至下 第1排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：楊建台、陳菱雅、楊奉儒、楊奉瑾，面朝斗燈 左邊，由上至下 第1排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：鄭昭明、閻紹琴、鄭雅存、鄭琦妍、鄭宇珀，面朝斗燈 左邊，由上至下 第1排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：陳吳綉雲、陳瑞敏、陳瑞真、陳瑞芳、陳郁雯、陳仲億、陳嫃妘、黃久晉，面朝斗燈 左邊，由上至下 第1排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：陳俊達、蔡月娥、林姿伶、陳政源、陳閎裕、陳凱郁、林鈺真、陳建廷，面朝斗燈 左邊，由上至下 第1排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：陳煚岳、王馨婉、陳亭瑄、陳羿菲，面朝斗燈 左邊，由上至下 第1排，由右至左 第7盞</p>
+        <!-- 斗燈左2 -->
+        <p class="searchable">斗燈：嚴金祺、林素英、嚴喬怡、嚴喬筠，面朝斗燈 左邊，由上至下 第2排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：楊正吉、江怡洵、楊凱亘，面朝斗燈 左邊，由上至下 第2排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：林宏榆、蕭靜彤、林頤欣、李秀玉，面朝斗燈 左邊，由上至下 第2排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：鄭棕鐿、林美璉、鄭智隆，面朝斗燈 左邊，由上至下 第2排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：李沛蓉、吳雨潔、吳宗翰、李翼丞、莊曜駿，面朝斗燈 左邊，由上至下 第2排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：余樹仁、林夏子、余誼禎、鄭麗珠、余炳勳、劉品妤、余妍菲、余畇蓁、林國瑄，面朝斗燈 左邊，由上至下 第2排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：吳昭嬋、楊恆禎、楊佳璋，面朝斗燈 左邊，由上至下 第2排，由右至左 第7盞</p>
+        <p class="searchable">斗燈：蔡泳春、賴玉欣、蔡宜蓁、蔡宜涵、吳玉蘭，面朝斗燈 左邊，由上至下 第2排，由右至左 第8盞</p>
+        <!-- 斗燈左3 -->
+        <p class="searchable">斗燈：顏清吉、顏玉女、顏先協、陳怡秀、顏志勝、顏淑君，面朝斗燈 左邊，由上至下 第3排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：葉木棟、簡沛羽、康月珠、葉宥菘、葉修誠、葉宛臻、葉芳妤，面朝斗燈 左邊，由上至下 第3排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：劉財壽、劉浚琪、劉貞鈺、劉廖秀英、楊淑如，面朝斗燈 左邊，由上至下 第3排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：矯翰林、矯博愛、李綉珠、矯伊玲、矯伊帆、陳垣智、陳佳虎，面朝斗燈 左邊，由上至下 第3排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：徐秀園、陳益璜、莊壹媚、陳彥均、陳益源、陳文彥、陳崇堯、陳冠名，面朝斗燈 左邊，由上至下 第3排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：高銘成、高銘葦、林靖婷、高瑾羽，面朝斗燈 左邊，由上至下 第3排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：吳清標、賴寶玉、吳國弘、吳政儒、吳宜樺、林思妤、張家瑜、劉宥辰、吳若凡、吳日恆、吳若曦、吳舜奇，面朝斗燈 左邊，由上至下 第3排，由右至左 第7盞</p>
+        <!-- 斗燈左4 -->
+        <p class="searchable">斗燈：鄭程騰、蕭婕湄、鄭緯朋，面朝斗燈 左邊，由上至下 第4排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：葉國順、葉錦賢、林愉靖、劉育承、劉育銓、劉宥鋌、葉域維、姚譽婷，面朝斗燈 左邊，由上至下 第4排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：紀姵秀、申秦嶺、申家甄、申曜睿，面朝斗燈 左邊，由上至下 第4排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：賴金星、賴佳芝、賴佳村、賴佳民、李數俄，面朝斗燈 左邊，由上至下 第4排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：林春輝、廖秀英、林育民、林明玉、林育廷、吳淑惠、王雅玲、林家穎、林信宇、林裕坤、林苡葳，面朝斗燈 左邊，由上至下 第4排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：謝志彬、李姵榆、謝秉榮、謝雅嫻、陳阿幼，面朝斗燈 左邊，由上至下 第4排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：陳玧均、陳哊、周妤庭、陳眃、陳枻縉，面朝斗燈 左邊，由上至下 第4排，由右至左 第7盞</p>
+        <p class="searchable">斗燈：陳煥然、李秀緞、陳佑任、陳宥宏、王怡婷、翁鈺筑、陳定呈、陳琳涵、陳敬傑，面朝斗燈 左邊，由上至下 第4排，由右至左 第8盞</p>
+        <!-- 斗燈左5 -->
+        <p class="searchable">斗燈：吳增雄、吳陳金玉、吳建緯、吳建岑、吳文筆、張貴玉、黃莉庭、吳芩靚、吳文儒、吳建鋐，面朝斗燈 左邊，由上至下 第5排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：林琪順、林筑雯、林沐佳、林玉宗、林琮溢、謝小惠，面朝斗燈 左邊，由上至下 第5排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：顏亮、顏瑞龍、顏建安、饒鈺渝、顏婕葳、顏孟緯、沈美英、顏啟晉、顏巧明，面朝斗燈 左邊，由上至下 第5排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：吳銘智、吳偉碩、吳家睿、劉碧伸、吳蘋育、阮金川、吳孟郁、陳禹諾、陳禹燁，面朝斗燈 左邊，由上至下 第5排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：童聖倫、林玉芬、童友慧、童友賢、童友亭、陳多，面朝斗燈 左邊，由上至下 第5排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：游玉珍、陳映靜、陳書豪、潘子濠，面朝斗燈 左邊，由上至下 第5排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：陳五福、黃郁雯、蘇冠易、陳瑀葳、邱隆緯、陳筱勤、蘇秉孝、蘇紹綸、邱安榆，面朝斗燈 左邊，由上至下 第5排，由右至左 第7盞</p>
+        <!-- 斗燈左6 -->
+        <p class="searchable">斗燈：林定巡、吳丁輝、陳惠渟、吳水源、吳永裕、吳琮貿、吳佾修、吳佾哲、吳諺愷、吳景熙、鍾伃秀、吳彥霖、吳霈萱，面朝斗燈 左邊，由上至下 第6排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：何宏偉、何宣樂、李美蓁、陳秀鳳、何清吉、陳秀微、李姿璇、李華昌、王俊元、王詩棠、李美蓤，面朝斗燈 左邊，由上至下 第6排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：王保源、陳寶珠、王志生、朱志香、王志銘、王月真、王宏裕、王芊芳、王怡心，面朝斗燈 左邊，由上至下 第6排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：劉仁光、洪心怡、劉佳樺、劉家芊，面朝斗燈 左邊，由上至下 第6排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：林仁傑、林志明、陳淑汝，面朝斗燈 左邊，由上至下 第6排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：林威圳、張溢凌、林洧正、林岡霓，面朝斗燈 左邊，由上至下 第6排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：謝金銓、吳淑娥、謝萬華、謝郁炘、武雅慧、謝宜儒、謝宜軒、朱淑珠、謝萬彰、謝政玹、謝炳利、謝淳翔、魏佑娟、謝俊賢，面朝斗燈 左邊，由上至下 第6排，由右至左 第8盞</p>
+        <p class="searchable">斗燈：林金蓮、沈民慈、沈榮煦，面朝斗燈 左邊，由上至下 第6排，由右至左 第8盞</p>
+        <!-- 斗燈左7 -->
+        <p class="searchable">斗燈：李瓊珠、劉錦茹、劉光維、吳俐璇、劉苡芹、劉家陞，面朝斗燈 左邊，由上至下 第7排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：張國能、劉玉玲、張程鈞、張佳宜，面朝斗燈 左邊，由上至下 第7排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：張朝焞、邱沛筠、張秉鎰、林培宇、張紫婕、林孟宗，面朝斗燈 左邊，由上至下 第7排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：劉金菊、施瑞智、張紫雲、張軒浩、張綠綺、彭祥恩、彭振男、施喬恩、施秋遠、張震宇、張洺銓、張妍安、張妙蓮，面朝斗燈 左邊，由上至下 第7排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：蕭玉美、林明江、林育申、林珈萱、林珈羽、薛雯君、林衢佑、林致廷，面朝斗燈 左邊，由上至下 第7排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：黃煥祺、黃吳納、洪慧如、黃冠儒，面朝斗燈 左邊，由上至下 第7排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：黃振彬、林桂華、黃智群、黃智新，面朝斗燈 左邊，由上至下 第7排，由右至左 第7盞</p>
+        <!-- 斗燈左8 -->
+        <p class="searchable">斗燈：童振芳、林繡珠、童建凱、童采榛，面朝斗燈 左邊，由上至下 第8排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：吳錫熙、邱晴柔、吳允程，面朝斗燈 左邊，由上至下 第8排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：張碧云、林峻宏、許書榮，面朝斗燈 左邊，由上至下 第8排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：李登豐、李忠騰、陳美芬，面朝斗燈 左邊，由上至下 第8排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：蔡顓宇、林文懿、蔡尚恩、蔡昇祐，面朝斗燈 左邊，由上至下 第8排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：謝清廉、葉美江、謝承浩，面朝斗燈 左邊，由上至下 第8排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：吳俊雄、鄭玉蘭、吳柏賢、吳仲倫，面朝斗燈 左邊，由上至下 第8排，由右至左 第7盞</p>
+        <p class="searchable">斗燈：吳胤、蔣右貞、吳乙叡、吳乙霖，面朝斗燈 左邊，由上至下 第8排，由右至左 第8盞</p>
+        <!-- 斗燈左9 -->
+        <p class="searchable">斗燈：陳嘉明、陳淑娟、陳俊源、陳智詠，面朝斗燈 左邊，由上至下 第9排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：林夆憲、李筍、鄭慧如、林媗翎、林翰廷，面朝斗燈 左邊，由上至下 第9排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：王富正、王嘉陞、李麗君、林婉昕，面朝斗燈 左邊，由上至下 第9排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：洪淑玲、王甄、王鄑、王創顯，面朝斗燈 左邊，由上至下 第9排，由右至左 第4盞</p>
+        <p class="searchable">斗燈：黃元亭、張惠雯、黃詠妍、黃杰豊，面朝斗燈 左邊，由上至下 第9排，由右至左 第5盞</p>
+        <p class="searchable">斗燈：林聰吉、楊素真、林佳穎、林芳儀、林欣諭，面朝斗燈 左邊，由上至下 第9排，由右至左 第6盞</p>
+        <p class="searchable">斗燈：詹前富、張杏端、詹欣璇、詹欣瑜，面朝斗燈 左邊，由上至下 第9排，由右至左 第7盞</p>
+        <!-- 斗燈左10 -->
+        <p class="searchable">斗燈：周傳傑、陳玉滿、周禹喆、陳禹崴，面朝斗燈 左邊，由上至下 第10排，由右至左 第1盞</p>
+        <p class="searchable">斗燈：潘玫綺、賴映燁、李梅枝、李英龍、李家誠，面朝斗燈 左邊，由上至下 第10排，由右至左 第2盞</p>
+        <p class="searchable">斗燈：陳偉弘、黃維綉、陳易承，面朝斗燈 左邊，由上至下 第10排，由右至左 第3盞</p>
+        <p class="searchable">斗燈：陳錦龍、陳瑋凌、陳幏鈞、陳泯翔、陳文王，面朝斗燈 左邊，由上至下 第10排，由右至左 第4盞</p>
+    </div>
+
+    <script>
+        function search() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var content = document.getElementById('content');
+            var paragraphs = content.getElementsByClassName('searchable');
+
+            for (var i = 0; i < paragraphs.length; i++) {
+                var text = paragraphs[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    paragraphs[i].style.display = 'block';
+                } else {
+                    paragraphs[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
