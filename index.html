@@ -7,12 +7,19 @@
         .searchable {
             display: none;
         }
+        #noResult {
+            display: none;
+            color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <h1>鹿仔港寮 永天宮 點燈查詢</h1>
     <input type="text" id="searchInput" placeholder="輸入姓名 或 公司行號">
     <button onclick="search()">查詢</button>
+
+    <p id="noResult">搜尋不到，請確認輸入是否有誤，或洽永天宮櫃台</p>
     
     <div id="content">
         <!-- 光明燈 -->
