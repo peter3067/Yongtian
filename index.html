@@ -871,6 +871,13 @@
             var content = document.getElementById('content');
             var paragraphs = content.getElementsByClassName('searchable');
 
+            if (input.length < 2) {
+                for (var i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.display = 'none';
+                }
+                return;
+            }
+
             for (var i = 0; i < paragraphs.length; i++) {
                 var text = paragraphs[i].innerText.toLowerCase();
                 if (text.includes(input)) {
