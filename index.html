@@ -14,8 +14,6 @@
     <input type="text" id="searchInput" placeholder="輸入姓名 或 公司行號">
     <button onclick="search()">查詢</button>
     
-    <p id="noResult">查無結果，請確認輸入是否有誤，或洽永天宮櫃台</p>
-    
     <div id="content">
         <!-- 光明燈 -->
         <p class="searchable">溫祥泰-光明燈：第一排 053</p>        <p class="searchable">林淑茹-光明燈：第一排 055</p>        <p class="searchable">葉何一-光明燈：第一排 056</p>        <p class="searchable">李英龍-光明燈：第一排 057</p>
@@ -873,11 +871,14 @@
             var input = document.getElementById('searchInput').value.toLowerCase();
             var content = document.getElementById('content');
             var paragraphs = content.getElementsByClassName('searchable');
+            var noResult = document.getElementById('noResult');
+            var found = false;
 
             if (input.length < 2) {
                 for (var i = 0; i < paragraphs.length; i++) {
                     paragraphs[i].style.display = 'none';
                 }
+                noResult.style.display = 'block';
                 return;
             }
 
@@ -890,7 +891,7 @@
                     paragraphs[i].style.display = 'none';
                 }
             }
-            
+
             if (!found) {
                 noResult.style.display = 'block';
             } else {
