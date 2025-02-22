@@ -13,6 +13,9 @@
     <h1>鹿仔港寮 永天宮 點燈查詢</h1>
     <input type="text" id="searchInput" placeholder="輸入姓名 或 公司行號">
     <button onclick="search()">查詢</button>
+    
+    <p id="noResult">查無結果，請確認輸入是否有誤，或洽永天宮櫃台</p>
+    
     <div id="content">
         <!-- 光明燈 -->
         <p class="searchable">溫祥泰-光明燈：第一排 053</p>        <p class="searchable">林淑茹-光明燈：第一排 055</p>        <p class="searchable">葉何一-光明燈：第一排 056</p>        <p class="searchable">李英龍-光明燈：第一排 057</p>
@@ -882,9 +885,16 @@
                 var text = paragraphs[i].innerText.toLowerCase();
                 if (text.includes(input)) {
                     paragraphs[i].style.display = 'block';
+                    found = true;
                 } else {
                     paragraphs[i].style.display = 'none';
                 }
+            }
+            
+            if (!found) {
+                noResult.style.display = 'block';
+            } else {
+                noResult.style.display = 'none';
             }
         }
     </script>
