@@ -890,12 +890,10 @@
             var content = document.getElementById('content');
             var paragraphs = content.getElementsByClassName('searchable');
             var found = false;
-
             if (input.length < 2) {
                 alert("請輸入至少兩個字");
                 return;
             }
-
             for (var i = 0; i < paragraphs.length; i++) {
                 var text = paragraphs[i].innerText.toLowerCase();
                 if (text.includes(input)) {
@@ -905,13 +903,20 @@
                     paragraphs[i].style.display = 'none';
                 }
             }
-
-            if (!found) {
-                document.getElementById('noResult').style.display = 'block';
-            } else {
-                document.getElementById('noResult').style.display = 'none';
-            }
+            document.getElementById('noResult').style.display = found ? 'none' : 'block';
         }
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('Operational Error');
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+                alert('Operational Error');
+            }
+        });
     </script>
 </body>
 </html>
