@@ -16,7 +16,7 @@
 </head>
 <body>
     <h1>鹿仔港寮 永天宮 點燈查詢</h1>
-    <input type="text" id="searchInput" placeholder="輸入姓名 或 公司行號">
+    <input type="text" id="searchInput" placeholder="輸入姓名 或 公司行號" oninput="validateInput()">
     <button onclick="search()">查詢</button>
 
     <p id="noResult">查詢無果，請確認輸入是否正確，或洽永天宮櫃台人員</p>
@@ -876,19 +876,23 @@
         <p class="searchable">斗燈：陳錦龍、陳瑋凌、陳幏鈞、陳泯翔、陳文王，面朝斗燈 左邊，由上至下 第10排，由右至左 第4盞</p>
     </div>
 
-    <script>
+     <script>
+        function validateInput() {
+            var input = document.getElementById('searchInput').value;
+            if (/\d/.test(input)) {
+                alert("無法使用數字搜尋");
+                document.getElementById('searchInput').value = input.replace(/\d/g, "");
+            }
+        }
+
         function search() {
             var input = document.getElementById('searchInput').value.toLowerCase();
             var content = document.getElementById('content');
             var paragraphs = content.getElementsByClassName('searchable');
-            var noResult = document.getElementById('noResult');
             var found = false;
 
             if (input.length < 2) {
-                for (var i = 0; i < paragraphs.length; i++) {
-                    paragraphs[i].style.display = 'none';
-                }
-                noResult.style.display = 'block';
+                alert("請輸入至少兩個字");
                 return;
             }
 
@@ -903,9 +907,9 @@
             }
 
             if (!found) {
-                noResult.style.display = 'block';
+                document.getElementById('noResult').style.display = 'block';
             } else {
-                noResult.style.display = 'none';
+                document.getElementById('noResult').style.display = 'none';
             }
         }
     </script>
